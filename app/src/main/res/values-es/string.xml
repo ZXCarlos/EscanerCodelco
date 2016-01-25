@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Escaner Codelco</string>
+    <string name="action_settings">Configuración</string>
+    <string name="botn">escáner</string>
+    <string name="botn2">Ayuda</string>
+    <string name="botn3">Creditos</string>
+    <string name="botn4">Sitio Web</string>
+    <string name="escaner">Toque la patalla para activar el escáner</string>
+    <string name="title_activity_pag_web">Codelco</string>
+    <string name="title_activity_ayuda">Ayuda Codelco</string>
+    <string name="title_activity_escaner">Escaner Codelco</string>
+    <string name="title_activity_creditos">Creditos Codelco</string>
+    <string name="title_activity_pags_principal">PagsPrincipal</string>
+</resources>

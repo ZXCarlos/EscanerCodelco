@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Scanner Codelco</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_pag_web">Codelco</string>
+    <string name="title_activity_ayuda">Help Codelco</string>
+    <string name="title_activity_escaner">Scanner Codelco</string>
+    <string name="title_activity_creditos">Credits Codelco</string>
+    <string name="botn">Scanner</string>
+    <string name="botn2">Help</string>
+    <string name="botn3">Credits</string>
+    <string name="botn4">Web Site</string>
+    <string name="escaner">Touch the screen ro activate the scanner</string>
+    <string name="title_activity_pags_principal">PagsPrincipal</string>
+</resources>
