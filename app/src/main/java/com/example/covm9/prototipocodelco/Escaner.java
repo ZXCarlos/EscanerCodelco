@@ -86,8 +86,8 @@ public class Escaner extends AppCompatActivity {
                 //se guarda en el string el codigo qr
                 qr_id = contents;
                 //se obtiene el primer caracter que indica si es un medico, medicina o ubicacion
-                String digito = qr_id.substring(0, 1);
-                Intent info = new Intent(Escaner.this, PagWeb.class);
+                //String digito = qr_id.substring(64, 65);
+                Intent info = new Intent(Escaner.this, Prueba.class);
                 info.putExtra("qr", qr_id);
                 startActivity(info);
 

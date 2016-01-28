@@ -11,4 +11,5 @@
     <string name="botn4">Web Site</string>
     <string name="escaner">Touch the screen ro activate the scanner</string>
     <string name="title_activity_pags_principal">PagsPrincipal</string>
+    <string name="title_activity_prueba">prueba</string>
 </resources>
