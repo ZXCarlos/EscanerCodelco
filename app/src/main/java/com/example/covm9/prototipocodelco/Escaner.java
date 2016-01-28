@@ -12,7 +12,9 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 public class Escaner extends AppCompatActivity {
     static final String ACTION_SCAN = "com.google.zxing.client.android.SCAN";
@@ -77,7 +79,6 @@ public class Escaner extends AppCompatActivity {
     //on ActivityResult method
 
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
-
         if (requestCode == 0) {
             if (resultCode == RESULT_OK) {
 
@@ -87,7 +88,7 @@ public class Escaner extends AppCompatActivity {
                 qr_id = contents;
                 //se obtiene el primer caracter que indica si es un medico, medicina o ubicacion
                 //String digito = qr_id.substring(64, 65);
-                Intent info = new Intent(Escaner.this, Prueba.class);
+                Intent info = new Intent(Escaner.this, PruebaScanner.class);
                 info.putExtra("qr", qr_id);
                 startActivity(info);
 

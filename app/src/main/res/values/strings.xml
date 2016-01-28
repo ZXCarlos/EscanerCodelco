@@ -12,4 +12,5 @@
     <string name="escaner">Touch the screen ro activate the scanner</string>
     <string name="title_activity_pags_principal">PagsPrincipal</string>
     <string name="title_activity_prueba">prueba</string>
+    <string name="title_activity_prueba_scanner">PruebaScanner</string>
 </resources>
