@@ -13,13 +13,5 @@ tools:context="com.example.covm9.prototipocodelco.PruebaScanner"
 tools:showIn="@layout/activity_prueba_scanner">
 
 
-    <ImageView
-        android:id="@+id/mImageView"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@+id/btnDownload"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="1dp"
 
-    />
 </LinearLayout>
