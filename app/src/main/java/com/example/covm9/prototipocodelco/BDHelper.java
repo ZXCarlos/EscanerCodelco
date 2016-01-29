@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 /**
- * Created by estefy on 28-01-2016.
+ * Created by Estefania Flores y Carlos Varas on 28-01-2016.
  */
 public class BDHelper extends SQLiteOpenHelper {
     public BDHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
@@ -79,5 +79,4 @@ public class BDHelper extends SQLiteOpenHelper {
         Cursor fila = db.rawQuery("select * from area where codigoDivision= '" + codigoDivision + "'", null);
         return  fila;
     }
-
 }
