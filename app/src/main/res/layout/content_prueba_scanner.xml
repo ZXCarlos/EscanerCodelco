@@ -19,6 +19,7 @@ tools:showIn="@layout/activity_prueba_scanner">
         android:layout_height="fill_parent"
         android:layout_below="@+id/btnDownload"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="148dp"
+        android:layout_marginBottom="1dp"
+
     />
 </LinearLayout>
