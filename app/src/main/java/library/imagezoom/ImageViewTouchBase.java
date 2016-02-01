@@ -1,6 +1,6 @@
 package library.imagezoom;
 
-import it.sephiroth.android.library.imagezoom.easing.Cubic;
+import library.imagezoom.easing.Cubic;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
