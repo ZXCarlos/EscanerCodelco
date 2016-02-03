@@ -28,8 +28,6 @@ public class Prueba extends AppCompatActivity {
         String digito3 = qrC.substring(129,139);
         TextView et3 = (TextView) findViewById(R.id.textView6);
         et3.setText(digito3);
-
-
     }
 
 }
