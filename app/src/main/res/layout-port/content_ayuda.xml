@@ -5,4 +5,13 @@
     android:background="@drawable/telefonos_emergencia"
     android:weightSum="1">
 
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ambuButton"
+        android:layout_gravity="right"
+        android:background="@drawable/ambu"
+        android:layout_marginTop="115dp"
+        android:layout_marginRight="20dp"/>
 </LinearLayout>
