@@ -24,7 +24,7 @@ public class Ayuda extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ayuda);
-        ImageButton ambuButton = (ImageButton) findViewById(R.id.ambuButton);
+        ImageButton ambuButton = (ImageButton) findViewById(R.id.imageButton2);
         ambuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
