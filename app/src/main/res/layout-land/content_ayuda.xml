@@ -1,16 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:background="@drawable/telefonos_emergencia"
     android:layout_height="match_parent">
 
 
-    <ImageButton
-        android:layout_width="140dp"
-        android:layout_height="30dp"
-        android:id="@+id/ambuButton"
-        android:layout_gravity="right"
-        android:background="@drawable/ambu"
-        android:layout_marginTop="60dp"
-        android:layout_marginRight="30dp"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:layout_width="121dp"
+            android:layout_height="70dp"
+            android:id="@+id/imageButton"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/emergencia"
+            android:layout_gravity="left|center_vertical" />
+
+        <ImageButton
+            android:layout_width="99dp"
+            android:layout_height="112dp"
+            android:id="@+id/imageButton2"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="13dp"
+            android:layout_gravity="left|center_vertical"
+            android:background="@drawable/num" />
+
+        <ImageButton
+            android:layout_width="96dp"
+            android:layout_height="68dp"
+            android:id="@+id/imageButton4"
+            android:layout_marginLeft="103dp"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center_horizontal|top"
+            android:background="@drawable/medico" />
+
+        <ImageButton
+            android:layout_width="109dp"
+            android:layout_height="110dp"
+            android:id="@+id/imageButton3"
+            android:layout_marginLeft="240dp"
+            android:layout_gravity="left|center_vertical"
+            android:background="@drawable/alarma" />
+
+        <ImageButton
+            android:layout_width="117dp"
+            android:layout_height="97dp"
+            android:id="@+id/imageButton5"
+            android:layout_marginTop="12dp"
+          android:layout_marginLeft="110dp"
+            android:layout_gravity="center"
+            android:background="@drawable/brigada" />
+
+        <ImageButton
+            android:layout_width="94dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageButton6"
+            android:layout_marginLeft="109dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="@drawable/protindus" />
+
+        <ImageButton
+            android:layout_width="71dp"
+            android:layout_height="97dp"
+            android:id="@+id/imageButton7"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="9dp"
+            android:layout_gravity="right|center_vertical"
+            android:background="@drawable/pee" />
+
+    </FrameLayout>
+
 </LinearLayout>
