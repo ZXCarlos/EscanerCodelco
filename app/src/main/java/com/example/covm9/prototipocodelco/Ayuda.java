@@ -32,6 +32,48 @@ public class Ayuda extends Activity {
                 call();
             }
         });
+        ImageButton oneButton = (ImageButton) findViewById(R.id.imageButton);
+        ambuButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Ayuda.this, "Sistemas de Emergencia de Codelco", Toast.LENGTH_SHORT).show();
+            }
+        });
+        ImageButton twoButton = (ImageButton) findViewById(R.id.imageButton3);
+        ambuButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Ayuda.this, "Cuando Se Active una emergencia sonara una alarma de alerta", Toast.LENGTH_SHORT).show();
+            }
+        });
+        ImageButton threeButton = (ImageButton) findViewById(R.id.imageButton4);
+        ambuButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Ayuda.this, "En caso de accidente al llame al CCE", Toast.LENGTH_SHORT).show();
+            }
+        });
+        ImageButton fourButton = (ImageButton) findViewById(R.id.imageButton5);
+        ambuButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Ayuda.this, "En caso de un accidente grabe solicite una ambulancia", Toast.LENGTH_SHORT).show();
+            }
+        });
+        ImageButton fiveButton = (ImageButton) findViewById(R.id.imageButton6);
+        ambuButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Ayuda.this, "En este caso solicite al CCE proteccion industrial", Toast.LENGTH_SHORT).show();
+            }
+        });
+        ImageButton sixButton = (ImageButton) findViewById(R.id.imageButton7);
+        ambuButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Ayuda.this, "Mostrar Mapa - En proceso", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     /**
