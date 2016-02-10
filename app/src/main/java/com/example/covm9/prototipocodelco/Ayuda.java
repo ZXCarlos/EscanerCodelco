@@ -51,7 +51,7 @@ public class Ayuda extends Activity {
         threeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Ayuda.this, "En caso de accidente al llame al CCE", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Ayuda.this, "En caso de accidente llame al CCE", Toast.LENGTH_SHORT).show();
             }
         });
         ImageButton fourButton = (ImageButton) findViewById(R.id.imageButton5);
