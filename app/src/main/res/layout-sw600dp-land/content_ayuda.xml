@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo">
+    android:background="@drawable/fondoayudac">
 
 
     <FrameLayout
@@ -15,7 +15,7 @@
             android:id="@+id/imageButton"
             android:layout_marginLeft="30dp"
             android:layout_marginBottom="18dp"
-            android:background="@drawable/emergencia"
+            android:background="@drawable/emergenciad"
             android:layout_gravity="left|center_vertical" />
 
         <ImageButton
@@ -25,7 +25,7 @@
             android:layout_marginLeft="160dp"
             android:layout_marginBottom="10dp"
             android:layout_gravity="left|center_vertical"
-            android:background="@drawable/num" />
+            android:background="@drawable/numd" />
 
         <ImageButton
             android:layout_width="96dp"
@@ -34,7 +34,7 @@
             android:layout_marginLeft="123dp"
             android:layout_marginTop="20dp"
             android:layout_gravity="center_horizontal|top"
-            android:background="@drawable/medico" />
+            android:background="@drawable/medicob" />
 
         <ImageButton
             android:layout_width="109dp"
@@ -43,7 +43,7 @@
             android:layout_marginLeft="260dp"
             android:layout_marginBottom="20dp"
             android:layout_gravity="left|center_vertical"
-            android:background="@drawable/alarma" />
+            android:background="@drawable/alarmab" />
 
         <ImageButton
             android:layout_width="117dp"
@@ -52,7 +52,7 @@
             android:layout_marginBottom="10dp"
           android:layout_marginLeft="130dp"
             android:layout_gravity="center"
-            android:background="@drawable/brigada" />
+            android:background="@drawable/brigadaa" />
 
         <ImageButton
             android:layout_width="94dp"
@@ -61,7 +61,7 @@
             android:layout_marginLeft="129dp"
             android:layout_marginBottom="15dp"
             android:layout_gravity="center_horizontal|bottom"
-            android:background="@drawable/protindus" />
+            android:background="@drawable/protindusa" />
 
         <ImageButton
             android:layout_width="71dp"
@@ -70,7 +70,7 @@
             android:layout_marginRight="30dp"
             android:layout_marginBottom="10dp"
             android:layout_gravity="right|center_vertical"
-            android:background="@drawable/pee" />
+            android:background="@drawable/peea" />
 
     </FrameLayout>
 
