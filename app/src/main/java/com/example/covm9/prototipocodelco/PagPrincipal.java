@@ -18,7 +18,7 @@ public class PagPrincipal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pag_principal);
 
-   
+        String fecha;
         Button sw = (Button) findViewById(R.id.button4);
         sw.setOnClickListener(new View.OnClickListener() {
             @Override
