@@ -15,8 +15,6 @@ public class PagWeb extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pag_web);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         WebView browser = (WebView)findViewById(R.id.webkit);
         browser.setWebViewClient(new WebViewClient());

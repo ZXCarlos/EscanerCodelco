@@ -52,7 +52,8 @@ public class PruebaScanner extends Activity {
 
         imageView.setScaleType(ImageView.ScaleType.MATRIX);
         view.setOnTouchListener(new PanAndZoomListener(view, imageView, PanAndZoomListener.Anchor.TOPLEFT));
-        qr = getIntent().getStringExtra("qr");
+        //qr = getIntent().getStringExtra("qr");
+        qr = "smb://10.65.19.48/User/estefy/Desktop/QR/hola.jpg";
         new DownloadImageTask().execute(qr);
 
 

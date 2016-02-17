@@ -24,8 +24,6 @@ public class Escaner extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_escaner);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         pantalla = (LinearLayout) findViewById(R.id.pantalla);
         pantalla.requestFocus();

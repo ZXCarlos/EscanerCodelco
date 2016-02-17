@@ -16,8 +16,6 @@ public class Prueba extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prueba);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         String qrC = getIntent().getStringExtra("qr");
         String digito = qrC.substring(64, 97);
         TextView et = (TextView) findViewById(R.id.textView4);
