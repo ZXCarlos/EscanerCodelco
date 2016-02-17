@@ -2,6 +2,8 @@ package com.example.covm9.prototipocodelco;
 
 
 import android.app.Activity;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
@@ -14,6 +16,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -52,8 +55,28 @@ public class PruebaScanner extends Activity {
 
         imageView.setScaleType(ImageView.ScaleType.MATRIX);
         view.setOnTouchListener(new PanAndZoomListener(view, imageView, PanAndZoomListener.Anchor.TOPLEFT));
-        //qr = getIntent().getStringExtra("qr");
-        qr = "smb://10.65.19.48/User/estefy/Desktop/QR/hola.jpg";
+        qr = getIntent().getStringExtra("qr");
+        BDHelper asistente = new BDHelper(PruebaScanner.this, "bdentrega", null, 1);
+        SQLiteDatabase bd = asistente.getWritableDatabase();
+        Cursor fila = bd.rawQuery("select * from Archivo where CodigoMaquina= '" + qr + "'", null);
+        if (fila.moveToFirst()) {
+
+            int numcol = fila.getColumnIndex("codigoArchivo");
+            String archivo = fila.getString(numcol);
+            numcol = fila.getColumnIndex("descripcion");
+            String descripcion = fila.getString(numcol);
+            numcol = fila.getColumnIndex("link");
+            String link = fila.getString(numcol);
+            numcol = fila.getColumnIndex("codigoMaquina");
+            String codMaquina = fila.getString(numcol);
+
+        }
+        fila.close();
+        bd.close();
+
+
+
+
         new DownloadImageTask().execute(qr);
 
 

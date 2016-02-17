@@ -81,48 +81,15 @@ public class Escaner extends AppCompatActivity {
             if (resultCode == RESULT_OK) {
 
                 //get the extras that are returned from the intent
-                String contents = intent.getStringExtra("SCAN_RESULT");
+                String codigoqr = intent.getStringExtra("SCAN_RESULT");
                 //se guarda en el string el codigo qr
-                qr_id = contents;
+                qr_id = codigoqr;
                 //se obtiene el primer caracter que indica si es un medico, medicina o ubicacion
                 //String digito = qr_id.substring(64, 65);
                 Intent info = new Intent(Escaner.this, PruebaScanner.class);
                 info.putExtra("qr", qr_id);
                 startActivity(info);
 
-               /* switch (digito) {
-                    case "D":
-                        Intent info = new Intent(Main4Activity.this, GuardarDoctor.class);
-                        info.putExtra("qr", qr_id);
-                        startActivity(info);
-                        break;
-                    case "M":
-                        Intent info2 = new Intent(Main4Activity.this, GuardarMedicamento.class);
-                        info2.putExtra("qr", qr_id);
-                        startActivity(info2);
-                        break;
-                    case "H":
-                        Intent infoHora = new Intent(Main4Activity.this,HoraNueva.class);
-                        infoHora.putExtra("qr",qr_id);
-                        startActivity(infoHora);
-                        break;
-
-                    case "U":
-                        BDHelper asistente = new BDHelper(Main4Activity.this, "bdentrega", null, 1);
-                        SQLiteDatabase bd = asistente.getWritableDatabase();
-                        Cursor c = bd.rawQuery("SELECT COUNT(*) FROM ubicacion WHERE id='" + qr_id + "'", null);
-                        c.moveToFirst();
-                        int count = c.getInt(0);
-                        if(count == 1) {
-                            Intent info3 = new Intent(Main4Activity.this, DatosUbicacion.class);
-                            info3.putExtra("qr", qr_id);
-                            startActivity(info3);
-                        }else {
-                            Toast.makeText(this, R.string.noHayUbicacion, Toast.LENGTH_LONG).show();
-                        }
-                        break;
-
-                }*/
             }
         }
     }

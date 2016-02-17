@@ -14,4 +14,6 @@
     <string name="title_activity_prueba">prueba</string>
     <string name="title_activity_prueba_scanner">PruebaScanner</string>
     <string name="title_activity_resp_escaner">RespEscaner</string>
+    <string name="errorActualizacion" />
+    <string name="actualizacion" />
 </resources>
