@@ -2,10 +2,14 @@ package com.example.covm9.prototipocodelco;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,6 +19,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Escaner extends AppCompatActivity {
     static final String ACTION_SCAN = "com.google.zxing.client.android.SCAN";
@@ -79,12 +94,10 @@ public class Escaner extends AppCompatActivity {
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         if (requestCode == 0) {
             if (resultCode == RESULT_OK) {
-
                 //get the extras that are returned from the intent
                 String codigoqr = intent.getStringExtra("SCAN_RESULT");
                 //se guarda en el string el codigo qr
                 qr_id = codigoqr;
-                //se obtiene el primer caracter que indica si es un medico, medicina o ubicacion
                 //String digito = qr_id.substring(64, 65);
                 Intent info = new Intent(Escaner.this, PruebaScanner.class);
                 info.putExtra("qr", qr_id);

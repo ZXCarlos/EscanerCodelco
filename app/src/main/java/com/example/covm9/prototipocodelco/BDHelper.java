@@ -36,7 +36,7 @@ public class BDHelper extends SQLiteOpenHelper {
                 "nombreSap text," +
                 "descripcionSap text," +
                 "cantidadDisponible int," +
-                "codigoMaquina text,"+
+                "codigoMaquina text," +
                 "FOREIGN KEY (codigoMaquina) REFERENCES Maquina (codigoMaquina))");
     }
 
@@ -63,6 +63,7 @@ public class BDHelper extends SQLiteOpenHelper {
         db.execSQL("create table Maquina(codigoMaquina text primary key," +
                 "nombreMaquina text)");
     }
+
 
     public void actualizarSap(SQLiteDatabase db){
         db.execSQL("DROP TABLE Sap");
@@ -91,19 +92,19 @@ public class BDHelper extends SQLiteOpenHelper {
         bd.insert("Maquina", null, registro);
     }
 
-    public void cargarArchivo(String CodigoArchiv,String Descriocion,String Link,String CodigoMaquina,  SQLiteDatabase bd) {
+    public void cargarArchivo(String CodigoArchivo,String Descriocion,String Link,String CodigoMaquina,  SQLiteDatabase bd) {
 
 
         //se crea un registro para insertar datos
         ContentValues registro = new ContentValues();
         //se agregan los datos del medico al registro
-        registro.put("codigoArchivo", CodigoArchiv);
+        registro.put("codigoArchivo", CodigoArchivo);
         registro.put("descripcion", Descriocion);
         registro.put("link", Link);
         registro.put("codigoMaquina", CodigoMaquina);
 
         //se agrega el archivo a la bd
-        Log.d("CodArchivo", "" + CodigoArchiv);
+        Log.d("CodArchivo", "" + CodigoArchivo);
         bd.insert("Archivo", null, registro);
 
 

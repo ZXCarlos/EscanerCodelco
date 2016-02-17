@@ -30,30 +30,13 @@ import java.util.Date;
 
 public class PagPrincipal extends AppCompatActivity {
 
-    public static final String DIRECCION_CONEXION = "http://qrcodech.16mb.com/codigosqr/GetDataArchivo.php";
-    public static final int TIMEOUT = 1000*15;
-    ProgressDialog progressDialog;
-    boolean PRIMERA;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pag_principal);
 
-        SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
-        Date d = new Date();
-        String dayOfTheWeek = sdf.format(d);
-
-        if(dayOfTheWeek.equals("miércoles")){
-
-            progressDialog = new ProgressDialog(PagPrincipal.this);
-            progressDialog.setCancelable(false);
-            progressDialog.setTitle("Conectando, Por favor espere");
-            progressDialog.show();
-            JsonRead cargar = new JsonRead();
-            cargar.execute();
-
-        }
 
 
 
@@ -121,74 +104,5 @@ public class PagPrincipal extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private class JsonRead extends AsyncTask<Void,Void, String> {
 
-        int tap;
-        String datos="";
-
-        protected String doInBackground(Void... params) {
-
-            try{
-                URL url = new URL(DIRECCION_CONEXION);
-                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-                httpURLConnection.setConnectTimeout(TIMEOUT);
-
-                InputStream is = httpURLConnection.getInputStream();
-                while ((tap = is.read()) != -1){
-                    datos+=(char) tap;
-                }
-                is.close();
-                httpURLConnection.disconnect();
-                return datos;
-            }catch (MalformedURLException e){
-                e.printStackTrace();
-                return "Exception: " + e.getMessage();
-            }
-            catch (IOException e){
-                e.printStackTrace();
-                return "Exception: " + e.getMessage();
-            }
-        }
-
-        @Override
-            protected void onPostExecute(String s) {
-            progressDialog.dismiss();
-            BDHelper asistente = new BDHelper(PagPrincipal.this, "bdentrega", null, 1);
-            SQLiteDatabase bd = asistente.getWritableDatabase();
-            asistente.actualizarArchivo(bd);
-            String err=null;
-            try{
-                int indexFinal = s.indexOf("]");
-                String resto = s.substring(1,indexFinal);
-                int index;
-                String objeto;
-                while(resto.length() > 0) {
-                    index = resto.indexOf("}");
-                    objeto = resto.substring(0,index+1);
-                    JSONObject root = new JSONObject(objeto);
-                    String codigoArchivo = root.getString("codigoArchivo");
-                    String descripcion = root.getString("descripcion");
-                    String link = root.getString("link");
-                    String codigoMaquina = root.getString("codigoMaquina");
-                    asistente.cargarArchivo(codigoArchivo, descripcion, link, codigoMaquina, bd);
-                    if(index+1 >= resto.length()) {
-                        resto = "";
-                    }else {
-                        resto = resto.substring(index + 2);
-                    }
-                }
-                bd.close();
-
-            }catch (JSONException e){
-                Toast.makeText(PagPrincipal.this,R.string.errorActualizacion,Toast.LENGTH_LONG).show();
-                e.printStackTrace();
-                err = "Exception: " + e.getMessage();
-            }
-            catch (Exception e){
-                Toast.makeText(PagPrincipal.this,R.string.errorActualizacion, Toast.LENGTH_LONG).show();
-            }
-
-        }
-
-    }
 }
