@@ -5,7 +5,6 @@
     android:background="@drawable/fondodepantalla"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    android:contentDescription="hola como estas"
     android:descendantFocusability="afterDescendants">
     <Button
         android:layout_width="130dp"
