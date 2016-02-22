@@ -17,7 +17,7 @@
     <string name="title_activity_prueba">Codelco Chuquicamata</string>
     <string name="title_activity_prueba_scanner">Codelco Chuquicamata</string>
     <string name="title_activity_resp_escaner">Codelco Chuquicamata</string>
-    <string name="errorActualizacion">This can't update DB</string>
+    <string name="errorActualizacion">This can not update DB</string>
     <string name="actualizacion">DB update</string>
     <string name="title_activity_fichas">Fichas</string>
 
