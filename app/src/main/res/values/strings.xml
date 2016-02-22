@@ -17,4 +17,7 @@
     <string name="errorActualizacion" />
     <string name="actualizacion" />
     <string name="title_activity_fichas">Fichas</string>
+
+    <string name="openDrawer">Sap</string>
+    <string name="closeDrawer">Ficha</string>
 </resources>
