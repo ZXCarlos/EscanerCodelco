@@ -38,10 +38,6 @@
             android:label="@string/title_activity_ayuda"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Prueba"
-            android:label="@string/title_activity_prueba"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".PruebaScanner"
             android:label="@string/title_activity_prueba_scanner"
             android:theme="@style/AppTheme.NoActionBar" />

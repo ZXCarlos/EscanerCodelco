@@ -12,6 +12,9 @@
     <string name="title_activity_escaner">Escaner Codelco</string>
     <string name="title_activity_creditos">Creditos Codelco</string>
     <string name="title_activity_pags_principal">PagsPrincipal</string>
+    <string name="FT">Ficha Tecnica</string>
+    <string name="FR">Ficha de Ruta</string>
+    <string name="FS">Ficha de Seguridad</string>
 
     <string name="openDrawer">Sap</string>
     <string name="closeDrawer">Ficha</string>
