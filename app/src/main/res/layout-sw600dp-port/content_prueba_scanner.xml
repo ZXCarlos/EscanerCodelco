@@ -13,6 +13,7 @@
         android:id="@+id/image"
         android:layout_centerVertical="true"
         android:scaleType="centerCrop"
+        android:layout_marginTop="10dp"
         android:src="@drawable/logo" />
 
 </LinearLayout>

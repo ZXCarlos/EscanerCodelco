@@ -2,47 +2,77 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:background="@drawable/marcovertical">
 
 
-    <FrameLayout
-        android:layout_width="1dp"
-        android:layout_height="1dp">
-
-        <ImageButton
-            android:layout_width="1dp"
-            android:layout_height="1dp"
-            android:id="@+id/imageButton7" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton6" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:background="#faf8eb"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="26dp">
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageButton5" />
+            android:id="@+id/imageButton"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/emergenciab2" />
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageButton4" />
+            android:id="@+id/imageButton2"
+            android:background="@drawable/numb2"
+            android:layout_marginTop="95dp"
+            android:layout_marginLeft="72dp"/>
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageButton3" />
+            android:id="@+id/imageButton3"
+            android:background="@drawable/alarmac2"
+            android:layout_marginTop="190dp"
+            android:layout_marginLeft="115dp"/>
+
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageButton" />
-    </FrameLayout>
+            android:id="@+id/imageButton6"
+            android:background="@drawable/protindusc2"
+            android:layout_marginTop="290dp"
+            android:layout_marginLeft="17dp" />
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageButton2"
-        android:background="@drawable/fondovertical" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton5"
+            android:background="@drawable/brigadac2"
+            android:layout_marginTop="290dp"
+            android:layout_marginLeft="110dp"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton4"
+            android:background="@drawable/medicob2"
+            android:layout_marginTop="290dp"
+            android:layout_marginLeft="210dp"/>
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton7"
+            android:layout_marginTop="420dp"
+            android:layout_marginLeft="134dp"
+            android:background="@drawable/peeb2" />
+
+    </RelativeLayout>
 </LinearLayout>
