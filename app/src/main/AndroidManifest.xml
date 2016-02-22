@@ -45,6 +45,11 @@
             android:name=".PruebaScanner"
             android:label="@string/title_activity_prueba_scanner"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Fichas"
+            android:label="@string/title_activity_fichas"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

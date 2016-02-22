@@ -16,4 +16,5 @@
     <string name="title_activity_resp_escaner">RespEscaner</string>
     <string name="errorActualizacion" />
     <string name="actualizacion" />
+    <string name="title_activity_fichas">Fichas</string>
 </resources>
