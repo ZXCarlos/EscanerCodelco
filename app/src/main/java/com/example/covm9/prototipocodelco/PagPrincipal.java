@@ -1,5 +1,25 @@
 package com.example.covm9.prototipocodelco;
 
+/**
+ ########################################################################
+ # Copyright (C) 2016 Estefania Flores Carlos Varas <efs0013@gmail.com> #
+ # <covm091@gmail.com> 	                                                #
+ # 									                                    #
+ # This program is free software: you can redistribute it and/or modify #
+ # it under the terms of the GNU General Public License as published by #
+ # the Free Software Foundation, either version 3 of the License, or 	#
+ # (at your option) any later version. 					                #
+ # 									                                    #
+ # This program is distributed in the hope that it will be useful, 	    #
+ # but WITHOUT ANY WARRANTY; without even the implied warranty of     	#
+ # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the     	#
+ # GNU General Public License for more details.                  		#
+ # 				                                    					#
+ # You should have received a copy of the GNU General Public License 	#
+ # along with this program. If not, see <http://www.gnu.org/licenses/>. #
+ ########################################################################
+ **/
+
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
@@ -23,8 +43,15 @@ import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * Esta clase proporciona el ambiente que se alojara la base de datos y entre otros.
+ * @author: Estefania Flores Sandoval
+ * @author: Carlos Varas Miranda
+ * @version: 1.0.0 22/02/2016
+ * */
 public class PagPrincipal extends AppCompatActivity {
 
+    //Campos de la clase
     public static final String DIRECCION_CONEXION = "http://qrcodech.16mb.com/codigosqr/GetDataArchivo.php";
     public static final int TIMEOUT = 1000*15;
     ProgressDialog progressDialog;
@@ -32,6 +59,10 @@ public class PagPrincipal extends AppCompatActivity {
 
     private BDHelper BD;
 
+    /**
+     *Este metodo genera el ambiente de la pantalla de Pagina Principal.
+     * @param savedInstanceState El parametro esta por defecto en la creación en android, Guarda el estado de la instancia.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,57 +104,78 @@ public class PagPrincipal extends AppCompatActivity {
             }
         }
 
-
-
-
-
         Button sw = (Button) findViewById(R.id.button4);
         sw.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Metodo que define la accion del boton Pagina Web.
+             * @param vista Parametro de tipo View que permite la acción del boton.
+             */
             @Override
-            public void onClick(View v) {
+            public void onClick(View vista) {
                 Intent i = new Intent(PagPrincipal.this, PagWeb.class);
                 i.putExtra("URL", "http://www.codelco.com");
                 startActivity(i);
-            }
+            }//Cierre del metodo onClick
         });
 
         Button cr = (Button) findViewById(R.id.button3);
         cr.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Metodo que define la accion del boton creditos.
+             * @param vista Parametro de tipo View que permite la acción del boton.
+             */
             @Override
-            public void onClick(View v) {
+            public void onClick(View vista) {
                 Intent i = new Intent(PagPrincipal.this, Creditos.class);
                 startActivity(i);
-            }
+            }//Cierre del metodo onClick
         });
 
         Button qr = (Button) findViewById(R.id.button);
         qr.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Metodo que define la accion del boton scanner.
+             * @param vista Parametro de tipo View que permite la acción del boton.
+             */
             @Override
-            public void onClick(View v) {
+            public void onClick(View vista) {
                 Intent i = new Intent(PagPrincipal.this, Escaner.class);
                 startActivity(i);
-            }
+            }//Cierre del metodo onClick
         });
 
         Button ayuda = (Button) findViewById(R.id.button2);
         ayuda.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Metodo que define la accion del boton ayuda.
+             * @param vista Parametro de tipo View que permite la acción del boton.
+             */
             @Override
-            public void onClick(View v) {
+            public void onClick(View vista) {
                 Intent i = new Intent(PagPrincipal.this, Ayuda.class);
                 startActivity(i);
-            }
+            }//Cierre del metodo onClick
         });
-
 
     }
 
+    /**
+     * Metodo que genera el menu a mostrar por la aplicación
+     * @param menu Parametro de Menu que se define en el res
+     * @return true
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_pag_principal, menu);
         return true;
-    }
+    }//Cierre del metodo onCreateOptionsMenu
 
+    /**
+     * Metodo que genera las opciones a mostrar por el menu.
+     * @param item Pametro que reprecentan los items que se ingresaran al menu
+     * @return un boolean
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -137,13 +189,24 @@ public class PagPrincipal extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
+    }//Cierre del metodo onOptionsItemSelected
 
+    /**
+     * Esta clase proporciona el ambiente que se alojara la base de datos y entre otros.
+     * @author: Estefania Flores Sandoval
+     * @author: Carlos Varas Miranda
+     * @version: 1.0.0 22/02/2016
+     * */
     private class JsonRead extends AsyncTask<Void,Void, String>{
 
         int tap;
         String datos="";
 
+        /**
+         * Metodo que realiza la conexion con la base de datos.
+         * @param params
+         * @return string
+         */
         @Override
         protected String doInBackground(Void... params) {
 
@@ -167,8 +230,12 @@ public class PagPrincipal extends AppCompatActivity {
                 e.printStackTrace();
                 return "Exception: " + e.getMessage();
             }
-        }
+        }//Cierre del metodo doInBackground.
 
+        /**
+         * Metodo que carga los datos en la base de datos interna de la app.
+         * @param s Parametro que contiene un string con los datos a cargar en la base de datos interna.
+         */
         @Override
         protected void onPostExecute(String s) {
             progressDialog.dismiss();
@@ -212,6 +279,6 @@ public class PagPrincipal extends AppCompatActivity {
             catch (Exception e){
                 Toast.makeText(PagPrincipal.this,R.string.errorActualizacion,Toast.LENGTH_LONG).show();
             }
-        }
-    }
-}
+        }//Cierre del metodo  onPostExecute.
+    }//Cierre de la clase JsonRead.
+}//Cierre de la clase.
