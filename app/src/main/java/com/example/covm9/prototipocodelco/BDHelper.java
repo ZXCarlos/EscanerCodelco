@@ -2,7 +2,6 @@ package com.example.covm9.prototipocodelco;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
@@ -154,10 +153,10 @@ public class BDHelper extends SQLiteOpenHelper {
         //se crea la tabla archivo
         db.execSQL("create table Archivo(codigoArchivo text primary key," +
                 "descripcion text," +
+                "linkR text,"+
+                "codigoMaquina text,"+
                 "linkFT text,"+
                 "linkFS text,"+
-                "linkFR text,"+
-                "codigoMaquina text,"+
                 "FOREIGN KEY (codigoMaquina) REFERENCES Maquina (codigoMaquina))");
 
 
@@ -181,10 +180,10 @@ public class BDHelper extends SQLiteOpenHelper {
         //se crea la tabla archivo
         db.execSQL("create table Archivo(codigoArchivo text primary key," +
                 "descripcion text," +
+                "linkR text,"+
+                "codigoMaquina text,"+
                 "linkFT text,"+
                 "linkFS text,"+
-                "linkFR text,"+
-                "codigoMaquina text,"+
                 "FOREIGN KEY (codigoMaquina) REFERENCES Maquina (codigoMaquina))");
     }
 
@@ -224,21 +223,21 @@ public class BDHelper extends SQLiteOpenHelper {
         bd.insert("Maquina", null, registro);
     }
 
-    public void cargarArchivo(String CodigoArchivo,String Descriocion,String LinkR, String CodigoMaquina, String LinkFT, String LinkFS,  SQLiteDatabase bd) {
+    public void cargarArchivo(String CodigoArchivo,String Descripcion,String LinkR, String CodigoMaquina, String LinkFT, String LinkFS,  SQLiteDatabase bd) {
 
 
         //se crea un registro para insertar datos
         ContentValues registro = new ContentValues();
         //se agregan los datos del medico al registro
         registro.put("codigoArchivo", CodigoArchivo);
-        registro.put("descfripcion", Descriocion);
-        registro.put("linkFT", LinkR);
+        registro.put("descripcion", Descripcion);
+        registro.put("linkR", LinkR);
         registro.put("codigoMaquina", CodigoMaquina);
-        registro.put("linkFS", LinkFT);
-        registro.put("linkFR", LinkFS);
+        registro.put("linkFT", LinkFT);
+        registro.put("linkFS", LinkFS);
 
         //se agrega el archivo a la bd
-        Log.d("CodArchivo", "" + CodigoArchivo);
+        Log.d("CodigoArchivo", "" + CodigoArchivo);
         bd.insert("Archivo", null, registro);
 
 

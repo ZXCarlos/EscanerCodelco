@@ -4,10 +4,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
@@ -15,7 +12,7 @@ public class Fichas extends AppCompatActivity {
     String qr;
     String linkFT;
     String linkFS;
-    String linkFR;
+    String linkR;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,18 +25,28 @@ public class Fichas extends AppCompatActivity {
         if (fila.moveToFirst()) {
 
             int numcol;
+            numcol = fila.getColumnIndex("linkR");
+            linkR = fila.getString(numcol);
             numcol = fila.getColumnIndex("linkFT");
             linkFT = fila.getString(numcol);
             numcol = fila.getColumnIndex("linkFS");
             linkFS = fila.getString(numcol);
-            numcol = fila.getColumnIndex("linkFR");
-            linkFR = fila.getString(numcol);
 
         }
         fila.close();
         bd.close();
-        Button sw = (Button) findViewById(R.id.button4);
+        Button sw = (Button) findViewById(R.id.FR);
         sw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Fichas.this, PruebaScanner.class);
+                i.putExtra("link", linkR);
+                startActivity(i);
+            }
+        });
+
+        Button cr = (Button) findViewById(R.id.FT);
+        cr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Fichas.this, PruebaScanner.class);
@@ -48,22 +55,12 @@ public class Fichas extends AppCompatActivity {
             }
         });
 
-        Button cr = (Button) findViewById(R.id.button3);
-        cr.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Fichas.this, PruebaScanner.class);
-                i.putExtra("link", linkFS);
-                startActivity(i);
-            }
-        });
-
-        Button qr = (Button) findViewById(R.id.button);
+        Button qr = (Button) findViewById(R.id.FS);
         qr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Fichas.this, PruebaScanner.class);
-                i.putExtra("link", linkFR);
+                i.putExtra("link", linkFS);
                 startActivity(i);
             }
         });
