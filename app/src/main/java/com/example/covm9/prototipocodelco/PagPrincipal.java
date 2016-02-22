@@ -40,7 +40,12 @@ public class PagPrincipal extends AppCompatActivity {
         Date d = new Date();
         String dayOfTheWeek = sdf.format(d);
 
-        if(dayOfTheWeek.equals("lunes")){
+        //se revisa si es la primera ves que se entra a la aplicacion
+        boolean isFirstTime = MyPreferences.isFirst(PagPrincipal.this);
+
+        //si es la primera vez
+
+        if(isFirstTime) {
 
             progressDialog = new ProgressDialog(PagPrincipal.this);
             progressDialog.setCancelable(false);
@@ -48,7 +53,24 @@ public class PagPrincipal extends AppCompatActivity {
             progressDialog.show();
             JsonRead cargar = new JsonRead();
             cargar.execute();
-
+            if(dayOfTheWeek.equals("lunes")){
+                boolean isDay = MyPreferences.isDay(PagPrincipal.this);
+            }
+        }else if(dayOfTheWeek.equals("lunes")){
+            boolean isDay = MyPreferences.isDay(PagPrincipal.this);
+            if(isDay){
+                progressDialog = new ProgressDialog(PagPrincipal.this);
+                progressDialog.setCancelable(false);
+                progressDialog.setTitle("Conectando, Por favor espere");
+                progressDialog.show();
+                JsonRead cargar = new JsonRead();
+                cargar.execute();
+            }
+        }else if(!dayOfTheWeek.equals("lunes")){
+            boolean isDay = MyPreferences.isDay(PagPrincipal.this);
+            if(!isDay){
+                boolean isNoFirstTime = MyPreferences.isNoDay(PagPrincipal.this);
+            }
         }
 
 
