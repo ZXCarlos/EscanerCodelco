@@ -1,8 +1,25 @@
 package com.example.covm9.prototipocodelco;
 
 /**
- * Created by estefy on 01-02-2016.
- */
+ ########################################################################
+ # Copyright (C) 2016 Estefania Flores Carlos Varas <efs0013@gmail.com> #
+ # <covm091@gmail.com> 	                                                #
+ # 									                                    #
+ # This program is free software: you can redistribute it and/or modify #
+ # it under the terms of the GNU General Public License as published by #
+ # the Free Software Foundation, either version 3 of the License, or 	#
+ # (at your option) any later version. 					                #
+ # 									                                    #
+ # This program is distributed in the hope that it will be useful, 	    #
+ # but WITHOUT ANY WARRANTY; without even the implied warranty of     	#
+ # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the     	#
+ # GNU General Public License for more details.                  		#
+ # 				                                    					#
+ # You should have received a copy of the GNU General Public License 	#
+ # along with this program. If not, see <http://www.gnu.org/licenses/>. #
+ ########################################################################
+ **/
+
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -24,6 +41,11 @@ import android.view.View;
  * supportsZoom, supportsPan, supportsScaleAroundFocusPoint, drawOnCanvas.
  */
 
+/**
+ * @author: Estefania Flores Sandoval
+ * @author: Carlos Varas Miranda
+ * @version: 1.0.0 22/02/2016
+ */
 public class PanZoomView extends View {
 
     static protected final boolean ScaleAtFocusPoint = false;
@@ -56,6 +78,8 @@ public class PanZoomView extends View {
 
 
     /**
+     * Constructor de la clase
+     * @param context
      */
     public PanZoomView(Context context) {
         this(context, null, 0);

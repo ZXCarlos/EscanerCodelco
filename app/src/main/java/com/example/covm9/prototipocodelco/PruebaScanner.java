@@ -1,5 +1,24 @@
 package com.example.covm9.prototipocodelco;
 
+/**
+ ########################################################################
+ # Copyright (C) 2016 Estefania Flores Carlos Varas <efs0013@gmail.com> #
+ # <covm091@gmail.com> 	                                                #
+ # 									                                    #
+ # This program is free software: you can redistribute it and/or modify #
+ # it under the terms of the GNU General Public License as published by #
+ # the Free Software Foundation, either version 3 of the License, or 	#
+ # (at your option) any later version. 					                #
+ # 									                                    #
+ # This program is distributed in the hope that it will be useful, 	    #
+ # but WITHOUT ANY WARRANTY; without even the implied warranty of     	#
+ # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the     	#
+ # GNU General Public License for more details.                  		#
+ # 				                                    					#
+ # You should have received a copy of the GNU General Public License 	#
+ # along with this program. If not, see <http://www.gnu.org/licenses/>. #
+ ########################################################################
+ **/
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -20,8 +39,14 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-
+/**
+ * Esta clase que define las acciones que realiza la pantalla .
+ * @author: Estefania Flores Sandoval
+ * @author: Carlos Varas Miranda
+ * @version: 1.0.0 22/02/2016
+ */
 public class PruebaScanner extends AppCompatActivity {
+    //Campos de la clase
     //Tag para el control de trazas de LOG
     private static String APP_TAG = "ECTDownloadData";
     //Constante String con la URL de la imagen a descargar
@@ -50,7 +75,10 @@ public class PruebaScanner extends AppCompatActivity {
 
     ActionBarDrawerToggle mDrawerToggle;                  // Declaring Action Bar Drawer Toggle
 
-
+    /**
+     *Este metodo genera el ambiente de la pantalla de .
+     * @param savedInstanceState El parametro esta por defecto en la creación en android, Guarda el estado de la instancia.
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,6 +104,10 @@ public class PruebaScanner extends AppCompatActivity {
         Drawer = (DrawerLayout) findViewById(R.id.DrawerLayout);        // Drawer object Assigned to the view
         mDrawerToggle = new ActionBarDrawerToggle(this,Drawer, toolbar,R.string.openDrawer,R.string.closeDrawer){
 
+            /**
+             * Este metodo se encarga de abrir un drawer view
+             * @param drawerView
+             */
             @Override
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
@@ -83,6 +115,10 @@ public class PruebaScanner extends AppCompatActivity {
                 // open I am not going to put anything here)
             }
 
+            /**
+             * Este metodo se encarga de cerrar un drawer view
+             * @param drawerView
+             */
             @Override
             public void onDrawerClosed(View drawerView) {
                 super.onDrawerClosed(drawerView);
@@ -114,9 +150,14 @@ public class PruebaScanner extends AppCompatActivity {
         new DownloadImageTask().execute(link);
 
 
-    }
+    }//Cierre del metodo onCreate
 
-
+    /**
+     * Esta clase que define las acciones que permiten la descarga y visualizacion de las fichas.
+     * @author: Estefania Flores Sandoval
+     * @author: Carlos Varas Miranda
+     * @version: 1.0.0 22/02/2016
+     */
     private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
         /** El sistema Android ejecuta las sentencias del método doInBackground
          * en fondo a traves de un un Worker thread y le pasa los parámetros en la llamada
@@ -132,8 +173,13 @@ public class PruebaScanner extends AppCompatActivity {
             //Ya aquí estamos en el UI Thread o Main Thread por lo que podemos actualizar la
             // imagen del Image View para mostrala la imagen descargada
             imageView.setImageBitmap(result);
-        }
+        }//cierre del metodo onPostExecute
 
+        /**
+         * Este metodo descarga la ficha en formato imagen
+         * @param baseUrl
+         * @return
+         */
         private Bitmap downloadImagen(String baseUrl) {
             Bitmap myBitmap = null;
             try {
@@ -151,7 +197,6 @@ public class PruebaScanner extends AppCompatActivity {
                 e.printStackTrace();
             }
             return myBitmap;
-        }
-    }
-
-}
+        }//cierre del metodo downloadImagen
+    }//cierre de la clase DownloadImageTask
+}//cierre de la clase

@@ -1,5 +1,25 @@
 package com.example.covm9.prototipocodelco;
 
+/**
+ ########################################################################
+ # Copyright (C) 2016 Estefania Flores Carlos Varas <efs0013@gmail.com> #
+ # <covm091@gmail.com> 	                                                #
+ # 									                                    #
+ # This program is free software: you can redistribute it and/or modify #
+ # it under the terms of the GNU General Public License as published by #
+ # the Free Software Foundation, either version 3 of the License, or 	#
+ # (at your option) any later version. 					                #
+ # 									                                    #
+ # This program is distributed in the hope that it will be useful, 	    #
+ # but WITHOUT ANY WARRANTY; without even the implied warranty of     	#
+ # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the     	#
+ # GNU General Public License for more details.                  		#
+ # 				                                    					#
+ # You should have received a copy of the GNU General Public License 	#
+ # along with this program. If not, see <http://www.gnu.org/licenses/>. #
+ ########################################################################
+ **/
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.SQLException;
@@ -13,8 +33,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+
 /**
- * Created by Estefania Flores y Carlos Varas on 28-01-2016.
+ * Esta clase representa a la base de datos interna de la app
+ * @author: Estefania Flores Sandoval
+ * @author: Carlos Varas Miranda
+ * @version: 1.0.0 22/02/2016
  */
 public class BDHelper extends SQLiteOpenHelper {
     private static  String DB_PATH = "data/data/com.example.covm9.prototipocodelco/databases/";
@@ -169,11 +193,21 @@ public class BDHelper extends SQLiteOpenHelper {
                 "FOREIGN KEY (codigoMaquina) REFERENCES Maquina (codigoMaquina))");
     }
 
+    /**
+     * Metodo que define las acciones a realizar al actulizar la base de datos
+     * @param db
+     * @param oldVersion
+     * @param newVersion
+     */
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
 
+    /**
+     * Metodo que actualiza a la tabla Archivo
+     * @param db
+     */
     public void actualizarArchivo(SQLiteDatabase db){
         db.execSQL("DROP TABLE Archivo");
 
@@ -187,6 +221,10 @@ public class BDHelper extends SQLiteOpenHelper {
                 "FOREIGN KEY (codigoMaquina) REFERENCES Maquina (codigoMaquina))");
     }
 
+    /**
+     * Metodo que actualiza a la tabla Maquina
+     * @param db
+     */
     public void actualizarMaquina(SQLiteDatabase db){
         db.execSQL("DROP TABLE Maquina");
 
@@ -195,7 +233,10 @@ public class BDHelper extends SQLiteOpenHelper {
                 "nombreMaquina text)");
     }
 
-
+    /**
+     * Metodo que actualiza a la tabla Sap
+     * @param db
+     */
     public void actualizarSap(SQLiteDatabase db){
         db.execSQL("DROP TABLE Sap");
 
@@ -209,7 +250,12 @@ public class BDHelper extends SQLiteOpenHelper {
 
     }
 
-
+    /**
+     * Metodo que carga datos a la tabla Maquina
+     * @param codigoMaquina
+     * @param nombreMaquina
+     * @param bd
+     */
     public void cargarMaquina(String codigoMaquina,String nombreMaquina, SQLiteDatabase bd) {
 
 
@@ -223,6 +269,16 @@ public class BDHelper extends SQLiteOpenHelper {
         bd.insert("Maquina", null, registro);
     }
 
+    /**
+     * Metodo que carga datos a la tabla Archivo
+     * @param CodigoArchivo
+     * @param Descripcion
+     * @param LinkR
+     * @param CodigoMaquina
+     * @param LinkFT
+     * @param LinkFS
+     * @param bd
+     */
     public void cargarArchivo(String CodigoArchivo,String Descripcion,String LinkR, String CodigoMaquina, String LinkFT, String LinkFS,  SQLiteDatabase bd) {
 
 
@@ -243,6 +299,15 @@ public class BDHelper extends SQLiteOpenHelper {
 
     }
 
+    /**
+     * Metodo que carga datos a la tabla Sap
+     * @param CodigoSap
+     * @param NombreSap
+     * @param DescripcionSap
+     * @param CantidadDisponible
+     * @param CodigoMaquina
+     * @param bd
+     */
     public void cargarSap(String CodigoSap,String NombreSap, String DescripcionSap, int CantidadDisponible, String CodigoMaquina, SQLiteDatabase bd) {
 
 
