@@ -4,71 +4,73 @@
     android:layout_height="wrap_content"
     android:background="@drawable/fondoayudac">
 
-    <FrameLayout
+    <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="300dp">
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageButton4"
-            android:layout_marginLeft="123dp"
-            android:layout_marginTop="30dp"
-            android:layout_gravity="center_horizontal|top"
-            android:background="@drawable/medicob" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton5"
-            android:layout_marginLeft="130dp"
-            android:layout_gravity="center"
-            android:background="@drawable/brigadaa" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton6"
-            android:layout_marginLeft="129dp"
-            android:layout_marginBottom="30dp"
-            android:layout_gravity="center_horizontal|bottom"
-            android:background="@drawable/protindusa" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton7"
-            android:layout_marginRight="30dp"
-            android:layout_gravity="right|center_vertical"
-            android:background="@drawable/peea" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/imageButton"
-            android:layout_marginLeft="50dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="35dp"
             android:background="@drawable/emergenciad"
-            android:layout_gravity="left|center_vertical" />
+            android:layout_marginTop="110dp"/>
+
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageButton2"
-            android:layout_marginLeft="170dp"
-            android:layout_gravity="left|center_vertical"
-            android:background="@drawable/numd" />
+            android:background="@drawable/numd"
+            android:layout_marginLeft="155dp"
+            android:layout_marginTop="102dp" />
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageButton3"
-            android:layout_marginLeft="20dp"
-            android:layout_marginBottom="10dp"
-            android:layout_gravity="center"
-            android:background="@drawable/alarmab" />
+            android:background="@drawable/alarmab"
+            android:layout_marginTop="93dp"
+            android:layout_marginLeft="250dp"/>
 
-    </FrameLayout>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton4"
+            android:background="@drawable/medicob"
+            android:layout_marginLeft="353dp"
+            android:layout_marginTop="20dp"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton5"
+            android:background="@drawable/brigadaa"
+            android:layout_marginLeft="350dp"
+            android:layout_marginTop="110dp"/>
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton6"
+            android:background="@drawable/protindusa"
+            android:layout_marginLeft="355dp"
+            android:layout_marginTop="195dp" />
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton7"
+            android:background="@drawable/peea"
+            android:layout_marginLeft="460dp"
+            android:layout_marginTop="90dp"/>
+
+
+
+
+    </RelativeLayout>
 
 
 </LinearLayout>
