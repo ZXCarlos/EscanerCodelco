@@ -20,7 +20,8 @@
             android:textSize="@dimen/abc_dialog_padding_material"
             android:layout_gravity="center_horizontal"
             android:text="@string/escaner"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginLeft="70dp"/>
     </LinearLayout>
 
     <ImageView

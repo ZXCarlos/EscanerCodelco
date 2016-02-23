@@ -2,76 +2,76 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondoayudac">
+    android:background="@drawable/marcoorizontal">
 
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="70dp">
 
         <ImageButton
-            android:layout_width="121dp"
-            android:layout_height="70dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/imageButton"
-            android:layout_marginLeft="30dp"
-            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="35dp"
             android:background="@drawable/emergenciad"
-            android:layout_gravity="left|center_vertical" />
+            android:layout_marginTop="100dp"/>
+
 
         <ImageButton
-            android:layout_width="99dp"
-            android:layout_height="112dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/imageButton2"
-            android:layout_marginLeft="160dp"
-            android:layout_marginBottom="10dp"
-            android:layout_gravity="left|center_vertical"
-            android:background="@drawable/numd" />
+            android:background="@drawable/numd"
+            android:layout_marginLeft="170dp"
+            android:layout_marginTop="92dp" />
 
         <ImageButton
-            android:layout_width="96dp"
-            android:layout_height="68dp"
-            android:id="@+id/imageButton4"
-            android:layout_marginLeft="123dp"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center_horizontal|top"
-            android:background="@drawable/medicob" />
-
-        <ImageButton
-            android:layout_width="109dp"
-            android:layout_height="110dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/imageButton3"
-            android:layout_marginLeft="260dp"
-            android:layout_marginBottom="20dp"
-            android:layout_gravity="left|center_vertical"
-            android:background="@drawable/alarmab" />
+            android:background="@drawable/alarmab"
+            android:layout_marginTop="83dp"
+            android:layout_marginLeft="280dp"/>
 
         <ImageButton
-            android:layout_width="117dp"
-            android:layout_height="97dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton4"
+            android:background="@drawable/medicob"
+            android:layout_marginLeft="454dp"
+            android:layout_marginTop="5dp"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/imageButton5"
-            android:layout_marginBottom="10dp"
-          android:layout_marginLeft="130dp"
-            android:layout_gravity="center"
-            android:background="@drawable/brigadaa" />
+            android:background="@drawable/brigadaa"
+            android:layout_marginLeft="450dp"
+            android:layout_marginTop="100dp"/>
+
 
         <ImageButton
-            android:layout_width="94dp"
-            android:layout_height="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/imageButton6"
-            android:layout_marginLeft="129dp"
-            android:layout_marginBottom="15dp"
-            android:layout_gravity="center_horizontal|bottom"
-            android:background="@drawable/protindusa" />
+            android:background="@drawable/protindusa"
+            android:layout_marginLeft="456dp"
+            android:layout_marginTop="195dp" />
+
 
         <ImageButton
-            android:layout_width="71dp"
-            android:layout_height="97dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/imageButton7"
-            android:layout_marginRight="30dp"
-            android:layout_marginBottom="10dp"
-            android:layout_gravity="right|center_vertical"
-            android:background="@drawable/peea" />
+            android:background="@drawable/peea"
+            android:layout_marginLeft="600dp"
+            android:layout_marginTop="80dp"/>
 
-    </FrameLayout>
+
+
+
+    </RelativeLayout>
 
 </LinearLayout>
