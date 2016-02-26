@@ -3,7 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="1"
-    android:background="@drawable/marcovertical">
+    android:background="@drawable/marcovertical2">
 
 
     <RelativeLayout
@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageButton"
-            android:layout_marginLeft="130dp"
+            android:layout_marginLeft="120dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/emergenciad2" />
 
@@ -30,7 +30,7 @@
             android:id="@+id/imageButton2"
             android:background="@drawable/numa2"
             android:layout_marginTop="95dp"
-            android:layout_marginLeft="75dp"/>
+            android:layout_marginLeft="70dp"/>
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -38,7 +38,7 @@
             android:id="@+id/imageButton3"
             android:background="@drawable/alarmad2"
             android:layout_marginTop="200dp"
-            android:layout_marginLeft="125dp"/>
+            android:layout_marginLeft="120dp"/>
 
 
         <ImageButton
@@ -47,7 +47,7 @@
             android:id="@+id/imageButton6"
             android:background="@drawable/protindusd2"
             android:layout_marginTop="290dp"
-            android:layout_marginLeft="37dp" />
+            android:layout_marginLeft="30dp" />
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -55,7 +55,7 @@
             android:id="@+id/imageButton5"
             android:background="@drawable/brigadad2"
             android:layout_marginTop="290dp"
-            android:layout_marginLeft="120dp"/>
+            android:layout_marginLeft="115dp"/>
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -63,7 +63,7 @@
             android:id="@+id/imageButton4"
             android:background="@drawable/medicod2"
             android:layout_marginTop="290dp"
-            android:layout_marginLeft="200dp"/>
+            android:layout_marginLeft="190dp"/>
 
 
         <ImageButton
@@ -71,7 +71,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/imageButton7"
             android:layout_marginTop="395dp"
-            android:layout_marginLeft="142dp"
+            android:layout_marginLeft="138dp"
             android:background="@drawable/peed2" />
 
     </RelativeLayout>

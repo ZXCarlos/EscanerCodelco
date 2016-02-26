@@ -7,7 +7,7 @@
     android:focusableInTouchMode="true"
     android:descendantFocusability="afterDescendants">
     <Button
-        android:layout_width="160dp"
+        android:layout_width="125dp"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:text="@string/botn4"
@@ -20,7 +20,7 @@
         />
 
     <Button
-        android:layout_width="160dp"
+        android:layout_width="125dp"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:text="@string/botn"
@@ -33,7 +33,7 @@
         />
 
     <Button
-        android:layout_width="160dp"
+        android:layout_width="125dp"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:text="@string/botn2"
@@ -46,7 +46,7 @@
         />
 
     <Button
-        android:layout_width="160dp"
+        android:layout_width="125dp"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:layout_marginBottom="110dp"

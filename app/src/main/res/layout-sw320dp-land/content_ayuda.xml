@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/marcoorizontal">
+    android:background="@drawable/marcoorizontal2">
 
     <RelativeLayout
         android:layout_width="fill_parent"
@@ -12,8 +12,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageButton"
-            android:layout_marginLeft="35dp"
-            android:background="@drawable/emergenciad"
+            android:layout_marginLeft="36dp"
+            android:background="@drawable/emergenciap"
             android:layout_marginTop="110dp"/>
 
 
@@ -22,31 +22,31 @@
             android:layout_height="wrap_content"
             android:id="@+id/imageButton2"
             android:background="@drawable/numd"
-            android:layout_marginLeft="155dp"
+            android:layout_marginLeft="150dp"
             android:layout_marginTop="102dp" />
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageButton3"
-            android:background="@drawable/alarmab"
+            android:background="@drawable/alarmap"
             android:layout_marginTop="93dp"
-            android:layout_marginLeft="250dp"/>
+            android:layout_marginLeft="238dp"/>
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageButton4"
-            android:background="@drawable/medicob"
-            android:layout_marginLeft="353dp"
+            android:background="@drawable/medicop"
+            android:layout_marginLeft="333dp"
             android:layout_marginTop="20dp"/>
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageButton5"
-            android:background="@drawable/brigadaa"
-            android:layout_marginLeft="350dp"
+            android:background="@drawable/brigadap"
+            android:layout_marginLeft="330dp"
             android:layout_marginTop="110dp"/>
 
 
@@ -54,8 +54,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageButton6"
-            android:background="@drawable/protindusa"
-            android:layout_marginLeft="355dp"
+            android:background="@drawable/protindusp"
+            android:layout_marginLeft="335dp"
             android:layout_marginTop="195dp" />
 
 
@@ -63,8 +63,8 @@
             android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/imageButton7"
-                android:background="@drawable/peea"
-            android:layout_marginLeft="460dp"
+                android:background="@drawable/peep"
+            android:layout_marginLeft="430dp"
             android:layout_marginTop="90dp"/>
 
 

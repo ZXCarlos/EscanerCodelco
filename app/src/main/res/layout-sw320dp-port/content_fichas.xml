@@ -8,12 +8,12 @@
     android:contentDescription="hola como estas"
     android:descendantFocusability="afterDescendants">
     <Button
-        android:layout_width="160dp"
+        android:layout_width="140dp"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:text="@string/FT"
         android:id="@+id/FT"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="150dp"
         android:layout_marginLeft="10dp"
         android:background="#f0ffa61a"
         android:textColor="#fbf9f9"
@@ -21,7 +21,7 @@
         />
 
     <Button
-        android:layout_width="160dp"
+        android:layout_width="140dp"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:text="@string/FS"
@@ -34,7 +34,7 @@
         />
 
     <Button
-        android:layout_width="160dp"
+        android:layout_width="140dp"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:text="@string/FR"
