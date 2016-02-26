@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Escaner Codelco</string>
+    <string name="app_name">MSTM Escaner</string>
     <string name="action_settings">Configuración</string>
     <string name="botn">escáner</string>
     <string name="botn2">Ayuda</string>
@@ -11,11 +11,11 @@
     <string name="title_activity_ayuda">Ayuda Codelco</string>
     <string name="title_activity_escaner">Escaner Codelco</string>
     <string name="title_activity_creditos">Creditos Codelco</string>
-    <string name="title_activity_pags_principal">PagsPrincipal</string>
+    <string name="title_activity_pags_principal">Pagina Principal</string>
     <string name="FT">Ficha Tecnica</string>
     <string name="FR">Ficha de Ruta</string>
     <string name="FS">Ficha de Seguridad</string>
-    <string name="errorActualizacion">No se a pudo actualiazar la base de datos</string>
+    <string name="errorActualizacion">No se a pudo actualizar la base de datos</string>
     <string name="actualizacion">La base de datos a sido actualizada</string>
 
     <string name="openDrawer">Sap</string>
