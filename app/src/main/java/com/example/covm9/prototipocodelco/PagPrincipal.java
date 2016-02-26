@@ -54,6 +54,7 @@ public class PagPrincipal extends AppCompatActivity {
     //Campos de la clase
     public static final String DIRECCION_CONEXION_Archivo = "http://qrcodech.16mb.com/codigosqr/GetDataArchivo.php";
     public static final String DIRECCION_CONEXION_SAP = "http://qrcodech.16mb.com/codigosqr/GetDataSap.php";
+    public static final String DIRECCION_CONEXION_Maquina = "http://qrcodech.16mb.com/codigosqr/GetData.php";
     public static final int TIMEOUT = 1000*15;
     ProgressDialog progressDialog;
     boolean PRIMERA;
@@ -87,12 +88,14 @@ public class PagPrincipal extends AppCompatActivity {
             cargar.execute();
             JsonRead2 cargar2 = new JsonRead2();
             cargar2.execute();
+            JsonRead3 cargar3 = new JsonRead3();
+            cargar3.execute();
             if(dayOfTheWeek.equals("lunes")){
-                //boolean isDay = MyPreferences.isDay(PagPrincipal.this);
+                MyPreferences.isDay(PagPrincipal.this);
             }
-        }else if(dayOfTheWeek.equals("viernes")){
-            //boolean isDay = MyPreferences.isDay(PagPrincipal.this);
-            //if(isDay){
+        }else if(dayOfTheWeek.equals("lunes")){
+            boolean isDay = MyPreferences.isDay(PagPrincipal.this);
+            if(isDay){
                 progressDialog = new ProgressDialog(PagPrincipal.this);
                 progressDialog.setCancelable(false);
                 progressDialog.setTitle("Conectando, Por favor espere");
@@ -101,11 +104,13 @@ public class PagPrincipal extends AppCompatActivity {
                 cargar.execute();
                 JsonRead2 cargar2 = new JsonRead2();
                 cargar2.execute();
-            //}
+                JsonRead3 cargar3 = new JsonRead3();
+                cargar3.execute();
+            }
         }else if(!dayOfTheWeek.equals("lunes")){
             boolean isDay = MyPreferences.isDay(PagPrincipal.this);
             if(!isDay){
-                boolean isNoFirstTime = MyPreferences.isNoDay(PagPrincipal.this);
+                MyPreferences.isNoDay(PagPrincipal.this);
             }
         }
 
@@ -277,11 +282,13 @@ public class PagPrincipal extends AppCompatActivity {
                     Toast.makeText(PagPrincipal.this, R.string.actualizacion, Toast.LENGTH_SHORT).show();
                 }
             }catch (JSONException e){
+                boolean first = MyPreferences.isNoFirst(PagPrincipal.this);
                 Toast.makeText(PagPrincipal.this,R.string.errorActualizacion,Toast.LENGTH_LONG).show();
                 e.printStackTrace();
                 err = "Exception: " + e.getMessage();
             }
             catch (Exception e){
+                boolean first = MyPreferences.isNoFirst(PagPrincipal.this);
                 Toast.makeText(PagPrincipal.this,R.string.errorActualizacion,Toast.LENGTH_LONG).show();
             }
         }//Cierre del metodo  onPostExecute.
@@ -346,7 +353,7 @@ public class PagPrincipal extends AppCompatActivity {
                     String nombreSap = root.getString("nombreSap");
                     String descripcionSap = root.getString("descripcionSap");
                     int cantidadDisponible = root.getInt("cantidadDisponible");
-                    asistente.cargarSap(codigoSap,codigoM,nombreSap,descripcionSap,cantidadDisponible,bd);
+                    asistente.cargarSap(codigoSap, codigoM, nombreSap, descripcionSap, cantidadDisponible, bd);
                     if(index+1 >= resto.length()) {
                         resto = "";
                     }else {
@@ -360,13 +367,97 @@ public class PagPrincipal extends AppCompatActivity {
                     Toast.makeText(PagPrincipal.this, R.string.actualizacion, Toast.LENGTH_SHORT).show();
                 }
             }catch (JSONException e){
+                boolean first = MyPreferences.isNoFirst(PagPrincipal.this);
                 Toast.makeText(PagPrincipal.this,R.string.errorActualizacion,Toast.LENGTH_LONG).show();
                 e.printStackTrace();
                 err = "Exception: " + e.getMessage();
             }
             catch (Exception e){
+                boolean first = MyPreferences.isNoFirst(PagPrincipal.this);
                 Toast.makeText(PagPrincipal.this,R.string.errorActualizacion,Toast.LENGTH_LONG).show();
             }
         }//Cierre del metodo  onPostExecute.
-    }//Cierre de la clase JsonRead.
+    }//Cierre de la clase JsonRead2.
+    private class JsonRead3 extends AsyncTask<Void,Void, String>{
+
+        int tap;
+        String datos="";
+
+        /**
+         * Metodo que realiza la conexion con la base de datos.
+         * @param params
+         * @return string
+         */
+        @Override
+        protected String doInBackground(Void... params) {
+
+            try{
+                URL url = new URL(DIRECCION_CONEXION_Maquina);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                httpURLConnection.setConnectTimeout(TIMEOUT);
+
+                InputStream is = httpURLConnection.getInputStream();
+                while ((tap = is.read()) != -1){
+                    datos+=(char) tap;
+                }
+                is.close();
+                httpURLConnection.disconnect();
+                return datos;
+            }catch (MalformedURLException e){
+                e.printStackTrace();
+                return "Exception: " + e.getMessage();
+            }
+            catch (IOException e){
+                e.printStackTrace();
+                return "Exception: " + e.getMessage();
+            }
+        }//Cierre del metodo doInBackground.
+
+        /**
+         * Metodo que carga los datos en la base de datos interna de la app.
+         * @param s Parametro que contiene un string con los datos a cargar en la base de datos interna.
+         */
+        @Override
+        protected void onPostExecute(String s) {
+            progressDialog.dismiss();
+            BDHelper asistente = new BDHelper(PagPrincipal.this, "bdentrega", null, 1);
+            SQLiteDatabase bd = asistente.getWritableDatabase();
+            asistente.actualizarArchivo(bd);
+            String err=null;
+            try{
+                int indexFinal = s.indexOf("]");
+                String resto = s.substring(1,indexFinal);
+                int index;
+                String objeto;
+                while(resto.length() > 0) {
+                    index = resto.indexOf("}");
+                    objeto = resto.substring(0,index+1);
+                    JSONObject root = new JSONObject(objeto);
+                    String codigoM = root.getString("codigoMaquina");
+                    String nombreMaquina = root.getString("nombreMaquina");
+                    asistente.cargarMaquina(codigoM,nombreMaquina,bd);
+                    if(index+1 >= resto.length()) {
+                        resto = "";
+                    }else {
+                        resto = resto.substring(index + 2);
+                    }
+                }
+                bd.close();
+                if(PRIMERA) {
+                    PRIMERA = false;
+                }else {
+                    Toast.makeText(PagPrincipal.this, R.string.actualizacion, Toast.LENGTH_SHORT).show();
+                }
+            }catch (JSONException e){
+                boolean first = MyPreferences.isNoFirst(PagPrincipal.this);
+                Toast.makeText(PagPrincipal.this,R.string.errorActualizacion,Toast.LENGTH_LONG).show();
+                e.printStackTrace();
+                err = "Exception: " + e.getMessage();
+            }
+            catch (Exception e){
+                boolean first = MyPreferences.isNoFirst(PagPrincipal.this);
+                Toast.makeText(PagPrincipal.this,R.string.errorActualizacion,Toast.LENGTH_LONG).show();
+            }
+        }//Cierre del metodo  onPostExecute.
+    }//Cierre de la clase JsonRead3.
 }//Cierre de la clase.

@@ -50,6 +50,22 @@ public class MyPreferences {
     }//Cierre del metodo isFirst
 
     /**
+     * Metodo que reconoce si se inicia por primera vez la app
+     * @param context Parametro que define el contecto que se ejecuta el metodo
+     * @return
+     */
+    public static boolean isNoFirst(Context context){
+        final SharedPreferences reader = context.getSharedPreferences(MY_PREFERENCES, Context.MODE_PRIVATE);
+        final boolean first = reader.getBoolean("is_first", true);
+        if(!first){
+            final SharedPreferences.Editor editor = reader.edit();
+            editor.putBoolean("is_first", true);
+            editor.commit();
+        }
+        return first;
+    }//Cierre del metodo isFirst
+
+    /**
      * Metodo que reconoce si es el dia que se debe actualizar la app.
      * @param context Parametro que define el contecto que se ejecuta el metodo
      * @return
@@ -72,8 +88,8 @@ public class MyPreferences {
      */
     public static boolean isNoDay(Context context){
         final SharedPreferences reader = context.getSharedPreferences(MY_PREFERENCES, Context.MODE_PRIVATE);
-        final boolean day = reader.getBoolean("is_day", false);
-        if(day){
+        final boolean day = reader.getBoolean("is_day", true);
+        if(!day){
             final SharedPreferences.Editor editor = reader.edit();
             editor.putBoolean("is_day", true);
             editor.commit();

@@ -25,11 +25,14 @@ import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 /**
  * Esta clase que define las acciones que realiza la pantalla de Escaner.
@@ -138,11 +141,18 @@ public class Escaner extends AppCompatActivity {
                 String codigoqr = intent.getStringExtra("SCAN_RESULT");
                 //se guarda en el string el codigo qr
                 qr_id = codigoqr;
-                //se obtiene el primer caracter que indica si es un medico, medicina o ubicacion
-                //String digito = qr_id.substring(64, 65);
-                Intent info = new Intent(Escaner.this, Fichas.class);
-                info.putExtra("qr", qr_id);
-                startActivity(info);
+                BDHelper asistente = new BDHelper(Escaner.this, "bdentrega", null, 1);
+                SQLiteDatabase bd = asistente.getWritableDatabase();
+                Cursor fila = bd.rawQuery("select * from Maquina where CodigoMaquina= '" + qr_id + "'", null);
+                if (fila.getCount() > 0) {
+                    fila.close();
+                    bd.close();
+                    Intent info = new Intent(Escaner.this, Fichas.class);
+                    info.putExtra("qr", qr_id);
+                    startActivity(info);
+                }else{
+                    Toast.makeText(Escaner.this, "El codigo qr no es valido", Toast.LENGTH_LONG).show();
+                }
             }
         }
     }//Cierre del metodo onActivityResult
