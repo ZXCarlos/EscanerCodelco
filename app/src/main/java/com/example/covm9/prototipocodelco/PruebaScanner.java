@@ -20,6 +20,8 @@ package com.example.covm9.prototipocodelco;
  ########################################################################
  **/
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
@@ -31,9 +33,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.view.View;
 
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -54,12 +56,16 @@ public class PruebaScanner extends AppCompatActivity {
 
     public ImageView imageView;
     String link;
+    String qr;
+    String codigoSap;
+    String nombreSap;
+    int cantidadDisponible;
 
     //First We Declare Titles And Icons For Our Navigation Drawer List View
     //This Icons And Titles Are holded in an Array as you can see
 
-    String TITLES[] = {"Home","Sap001-MOTOR(2)","Sap002-HERRAMIENTAS(15)","Sap003-CINTA(0)","Sap004-ENGRANE(25)"};
-    int ICONS[] = {R.drawable.ic_home,R.drawable.ic_motor,R.drawable.ic_herramienta,R.drawable.ic_cinta,R.drawable.ic_gears};
+    String TITLES[] = new String [999];
+    int ICONS[] = new int [999];
 
     //Similarly we Create a String Resource for the name and email in the header view
     //And we also create a int resource for profile picture in the header view
@@ -86,6 +92,29 @@ public class PruebaScanner extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
+        //------------------Start BD------------------------
+        qr = getIntent().getStringExtra("qr");
+        int pos = 0;
+        BDHelper asistente = new BDHelper(PruebaScanner.this, "bdentrega", null, 1);
+        SQLiteDatabase bd = asistente.getWritableDatabase();
+        Cursor fila = bd.rawQuery("select * from Sap where CodigoMaquina= '" + qr + "'", null);
+        int total = fila.getCount();
+        fila.moveToFirst();
+        while(pos < total){
+            int numcol;
+            numcol = fila.getColumnIndex("codigoSap");
+            codigoSap = fila.getString(numcol);
+            numcol = fila.getColumnIndex("nombreSap");
+            nombreSap = fila.getString(numcol);
+            numcol = fila.getColumnIndex("cantidadDisponible");
+            cantidadDisponible = fila.getInt(numcol);
+            cargaArray(codigoSap,nombreSap,cantidadDisponible,pos);
+            pos++;
+            fila.moveToNext();
+        }
+        fila.close();
+        bd.close();
+        //------------------End BD------------------------
         mRecyclerView = (RecyclerView) findViewById(R.id.RecyclerView); // Assigning the RecyclerView Object to the xml View
 
         mRecyclerView.setHasFixedSize(true);                            // Letting the system know that the list objects are of fixed size
@@ -151,6 +180,33 @@ public class PruebaScanner extends AppCompatActivity {
 
 
     }//Cierre del metodo onCreate
+
+    public void cargaArray(String codSap, String nomSap, int cantDisponible,int pos){
+        TITLES[pos] = codSap+"-"+nomSap+"("+cantDisponible+")";
+
+        switch (nomSap){
+            case "Hardware":
+                ICONS[pos] = R.drawable.ic_hardware;
+                break;
+            case "Motor":
+                ICONS[pos] = R.drawable.ic_motor;
+                break;
+            case "Correa":
+                ICONS[pos] = R.drawable.ic_cinta;
+                break;
+            case "Cadena":
+                ICONS[pos] = R.drawable.ic_cadena;
+                break;
+            case "Herramientas":
+                ICONS[pos] = R.drawable.ic_herramienta;
+                break;
+            case "Engranage":
+                ICONS[pos] = R.drawable.ic_gears;
+                break;
+            default:
+                break;
+        }
+    }
 
     /**
      * Esta clase que define las acciones que permiten la descarga y visualizacion de las fichas.

@@ -77,6 +77,7 @@ public class Fichas extends AppCompatActivity {
             public void onClick(View vista) {
                 Intent i = new Intent(Fichas.this, PruebaScanner.class);
                 i.putExtra("link", linkR);
+                i.putExtra("qr", qr);
                 startActivity(i);
             }
         });
@@ -91,12 +92,13 @@ public class Fichas extends AppCompatActivity {
             public void onClick(View vista) {
                 Intent i = new Intent(Fichas.this, PruebaScanner.class);
                 i.putExtra("link", linkFT);
+                i.putExtra("qr", qr);
                 startActivity(i);
             }
         });
 
-        Button qr = (Button) findViewById(R.id.FS);
-        qr.setOnClickListener(new View.OnClickListener() {
+        Button qrButton = (Button) findViewById(R.id.FS);
+        qrButton.setOnClickListener(new View.OnClickListener() {
             /**
              * Metodo que define la accion del boton que realiza la accion del boton.
              * @param vista Parametro de tipo View que permite la acción del boton.
@@ -105,6 +107,7 @@ public class Fichas extends AppCompatActivity {
             public void onClick(View vista) {
                 Intent i = new Intent(Fichas.this, PruebaScanner.class);
                 i.putExtra("link", linkFS);
+                i.putExtra("qr", qr);
                 startActivity(i);
             }
         });

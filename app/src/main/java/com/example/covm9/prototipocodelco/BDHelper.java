@@ -308,17 +308,17 @@ public class BDHelper extends SQLiteOpenHelper {
      * @param CodigoMaquina
      * @param bd
      */
-    public void cargarSap(String CodigoSap,String NombreSap, String DescripcionSap, int CantidadDisponible, String CodigoMaquina, SQLiteDatabase bd) {
+    public void cargarSap(String CodigoSap, String CodigoMaquina,String NombreSap, String DescripcionSap, int CantidadDisponible, SQLiteDatabase bd) {
 
 
         //se crea un registro para insertar datos
         ContentValues registro = new ContentValues();
         //se agregan los datos del medico al registro
         registro.put("codigoSap", CodigoSap);
+        registro.put("codigoMaquina", CodigoMaquina);
         registro.put("nombreSap", NombreSap);
         registro.put("descripcionSap", DescripcionSap);
         registro.put("cantidadDisponible", CantidadDisponible);
-        registro.put("codigoMaquina", CodigoMaquina);
         //se agrega el doctor a la bd
         Log.d("CodSap", "" + CodigoMaquina);
         bd.insert("Sap", null, registro);
