@@ -84,12 +84,12 @@ public class PagPrincipal extends AppCompatActivity {
             progressDialog.setCancelable(false);
             progressDialog.setTitle("Conectando, Por favor espere");
             progressDialog.show();
-            JsonRead cargar = new JsonRead();
-            cargar.execute();
-            JsonRead2 cargar2 = new JsonRead2();
-            cargar2.execute();
             JsonRead3 cargar3 = new JsonRead3();
             cargar3.execute();
+            JsonRead2 cargar2 = new JsonRead2();
+            cargar2.execute();
+            JsonRead cargar = new JsonRead();
+            cargar.execute();
             if(dayOfTheWeek.equals("lunes")){
                 MyPreferences.isDay(PagPrincipal.this);
             }
@@ -100,12 +100,12 @@ public class PagPrincipal extends AppCompatActivity {
                 progressDialog.setCancelable(false);
                 progressDialog.setTitle("Conectando, Por favor espere");
                 progressDialog.show();
+                JsonRead3 cargar3 = new JsonRead3();
+                cargar3.execute();
                 JsonRead cargar = new JsonRead();
                 cargar.execute();
                 JsonRead2 cargar2 = new JsonRead2();
                 cargar2.execute();
-                JsonRead3 cargar3 = new JsonRead3();
-                cargar3.execute();
             }
         }else if(!dayOfTheWeek.equals("lunes")){
             boolean isDay = MyPreferences.isDay(PagPrincipal.this);

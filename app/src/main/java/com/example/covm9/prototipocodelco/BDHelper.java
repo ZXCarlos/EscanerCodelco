@@ -33,7 +33,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-
 /**
  * Esta clase representa a la base de datos interna de la app
  * @author: Estefania Flores Sandoval
