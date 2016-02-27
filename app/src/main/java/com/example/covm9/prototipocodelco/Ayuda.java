@@ -22,7 +22,9 @@ package com.example.covm9.prototipocodelco;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -63,7 +65,21 @@ public class Ayuda extends Activity {
             @Override
             public void onClick(View vista) {
                 fono = "+56950462323";
-                call();
+                AlertDialog.Builder dialogo1 = new AlertDialog.Builder(Ayuda.this);
+                dialogo1.setTitle("Importante");
+                dialogo1.setMessage("¿Seguro que desea llamar al servicio de emergencia de coldelco?");
+                dialogo1.setCancelable(false);
+                dialogo1.setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialogo1, int id) {
+                        call();
+                    }
+                });
+                dialogo1.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialogo1, int id) {
+                        Toast t=Toast.makeText(Ayuda.this,"Se a cancelado la llamada.", Toast.LENGTH_SHORT);
+                    }
+                });
+                dialogo1.show();
             }//Cierre del metodo onClick
         });
         ImageButton oneButton = (ImageButton) findViewById(R.id.imageButton);
