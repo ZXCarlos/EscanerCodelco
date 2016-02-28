@@ -12,7 +12,7 @@
     <string name="FT">data sheet</string>
     <string name="FR">routing slip</string>
     <string name="FS">security file</string>
-    <string name="escaner">Touch the screen ro activate the scanner</string>
+    <string name="escaner">Touch the screen to activate the scanner</string>
     <string name="title_activity_pags_principal">Codelco Chuquicamata</string>
     <string name="title_activity_prueba">Codelco Chuquicamata</string>
     <string name="title_activity_prueba_scanner">Codelco Chuquicamata</string>

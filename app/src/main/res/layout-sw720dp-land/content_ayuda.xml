@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/marcoorizontal2">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="600dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="70dp">
+
+        <ImageButton
+            android:layout_width="200dp"
+            android:layout_height="130"
+            android:id="@+id/imageButton"
+            android:layout_marginLeft="65dp"
+            android:background="@drawable/emergenciad"
+            android:layout_marginTop="190dp"/>
+
+
+        <ImageButton
+            android:layout_width="170dp"
+            android:layout_height="190dp"
+            android:id="@+id/imageButton2"
+            android:background="@drawable/numd"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="182dp" />
+
+        <ImageButton
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/imageButton3"
+            android:background="@drawable/alarmab"
+            android:layout_marginTop="165dp"
+            android:layout_marginLeft="490dp"/>
+
+        <ImageButton
+            android:layout_width="170"
+            android:layout_height="170"
+            android:id="@+id/imageButton4"
+            android:background="@drawable/medicob"
+            android:layout_marginLeft="714dp"
+            android:layout_marginTop="15dp"/>
+
+        <ImageButton
+            android:layout_width="200dp"
+            android:layout_height="170dp"
+            android:id="@+id/imageButton5"
+            android:background="@drawable/brigadaa"
+            android:layout_marginLeft="710dp"
+            android:layout_marginTop="200dp"/>
+
+
+        <ImageButton
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:id="@+id/imageButton6"
+            android:background="@drawable/protindusa"
+            android:layout_marginLeft="726dp"
+            android:layout_marginTop="365dp" />
+
+
+        <ImageButton
+            android:layout_width="170dp"
+            android:layout_height="200dp"
+            android:id="@+id/imageButton7"
+            android:background="@drawable/peea"
+            android:layout_marginLeft="930dp"
+            android:layout_marginTop="180dp"/>
+
+    </RelativeLayout>
+</LinearLayout>

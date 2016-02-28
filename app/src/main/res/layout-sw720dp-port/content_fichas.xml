@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/fondodepantalla"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:contentDescription="hola como estas"
+    android:descendantFocusability="afterDescendants">
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/FT"
+        android:id="@+id/FT"
+        android:layout_marginTop="390dp"
+        android:layout_marginLeft="10dp"
+        android:background="#f0ffa61a"
+        android:textColor="#fbf9f9"
+        android:textSize="@dimen/text_size_standard"
+        />
+
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/FS"
+        android:id="@+id/FS"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="25dp"
+        android:background="#f0b45400"
+        android:textColor="#fbf9f9"
+        android:textSize="@dimen/text_size_standard"
+        />
+
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/FR"
+        android:id="@+id/FR"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="200dp"
+        android:background="#f0ffa61a"
+        android:textColor="#fbf9f9"
+        android:textSize="@dimen/text_size_standard"
+        />
+</LinearLayout>
