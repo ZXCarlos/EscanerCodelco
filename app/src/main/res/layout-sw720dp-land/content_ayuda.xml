@@ -15,7 +15,7 @@
             android:layout_height="130dp"
             android:id="@+id/imageButton"
             android:layout_marginLeft="65dp"
-            android:background="@drawable/emergenciad"
+            android:background="@drawable/emergenciap"
             android:layout_marginTop="190dp"/>
 
 
@@ -23,7 +23,7 @@
             android:layout_width="170dp"
             android:layout_height="190dp"
             android:id="@+id/imageButton2"
-            android:background="@drawable/numd"
+            android:background="@drawable/nump"
             android:layout_marginLeft="300dp"
             android:layout_marginTop="182dp" />
 
@@ -31,7 +31,7 @@
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:id="@+id/imageButton3"
-            android:background="@drawable/alarmab"
+            android:background="@drawable/alarmap"
             android:layout_marginTop="165dp"
             android:layout_marginLeft="490dp"/>
 
@@ -39,7 +39,7 @@
             android:layout_width="170dp"
             android:layout_height="170dp"
             android:id="@+id/imageButton4"
-            android:background="@drawable/medicob"
+            android:background="@drawable/medicop"
             android:layout_marginLeft="714dp"
             android:layout_marginTop="15dp"/>
 
@@ -47,7 +47,7 @@
             android:layout_width="200dp"
             android:layout_height="170dp"
             android:id="@+id/imageButton5"
-            android:background="@drawable/brigadaa"
+            android:background="@drawable/brigadap"
             android:layout_marginLeft="710dp"
             android:layout_marginTop="200dp"/>
 
@@ -56,7 +56,7 @@
             android:layout_width="170dp"
             android:layout_height="170dp"
             android:id="@+id/imageButton6"
-            android:background="@drawable/protindusa"
+            android:background="@drawable/protindusp"
             android:layout_marginLeft="726dp"
             android:layout_marginTop="365dp" />
 
@@ -65,7 +65,7 @@
             android:layout_width="170dp"
             android:layout_height="200dp"
             android:id="@+id/imageButton7"
-            android:background="@drawable/peea"
+            android:background="@drawable/peep"
             android:layout_marginLeft="930dp"
             android:layout_marginTop="180dp"/>
 

@@ -4,12 +4,12 @@
     android:layout_height="wrap_content"
     android:background="@drawable/fondodepantalla2">
     <Button
-        android:layout_width="370dp"
+        android:layout_width="170dp"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:text="Ficha Tecnica"
         android:id="@+id/FT"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="55dp"
         android:layout_marginLeft="100dp"
         android:background="#f0ffa61a"
         android:textColor="#fbf9f9"
@@ -17,12 +17,12 @@
         />
 
     <Button
-        android:layout_width="370dp"
+        android:layout_width="170dp"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:text="Ficha de Seguridad"
         android:id="@+id/FS"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="165dp"
         android:background="#f0b45400"
         android:textColor="#fbf9f9"
@@ -30,14 +30,14 @@
         />
 
     <Button
-        android:layout_width="370dp"
+        android:layout_width="170dp"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:text="Ficha de Ruta"
         android:id="@+id/FR"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="100dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="80dp"
         android:background="#f0ffa61a"
         android:textColor="#fbf9f9"
         android:textSize="@dimen/text_size_standard"
