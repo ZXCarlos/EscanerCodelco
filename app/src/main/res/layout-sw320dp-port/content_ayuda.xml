@@ -6,73 +6,79 @@
     android:background="@drawable/marcovertical2">
 
 
-    <RelativeLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal"
-        android:background="#faf8eb"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="26dp">
+        android:layout_height="match_parent">
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton"
-            android:layout_marginLeft="120dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/emergenciad2" />
+        <RelativeLayout
+            android:layout_width="370dp"
+            android:layout_height="640dp"
+            android:layout_gravity="center"
+            android:background="#faf8eb"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="26dp">
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton2"
-            android:background="@drawable/numa2"
-            android:layout_marginTop="95dp"
-            android:layout_marginLeft="70dp"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/emergenciad2" />
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton3"
-            android:background="@drawable/alarmad2"
-            android:layout_marginTop="200dp"
-            android:layout_marginLeft="120dp"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton2"
+                android:background="@drawable/numa2"
+                android:layout_marginTop="185dp"
+                android:layout_marginLeft="90dp"/>
 
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton6"
-            android:background="@drawable/protindusd2"
-            android:layout_marginTop="290dp"
-            android:layout_marginLeft="30dp" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton5"
-            android:background="@drawable/brigadad2"
-            android:layout_marginTop="290dp"
-            android:layout_marginLeft="115dp"/>
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton4"
-            android:background="@drawable/medicod2"
-            android:layout_marginTop="290dp"
-            android:layout_marginLeft="190dp"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton3"
+                android:background="@drawable/alarmad2"
+                android:layout_marginTop="290dp"
+                android:layout_marginLeft="140dp"/>
 
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton7"
-            android:layout_marginTop="395dp"
-            android:layout_marginLeft="138dp"
-            android:background="@drawable/peed2" />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton6"
+                android:background="@drawable/protindusd2"
+                android:layout_marginTop="380dp"
+                android:layout_marginLeft="50dp" />
 
-    </RelativeLayout>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton5"
+                android:background="@drawable/brigadad2"
+                android:layout_marginTop="380dp"
+                android:layout_marginLeft="135dp"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton4"
+                android:background="@drawable/medicod2"
+                android:layout_marginTop="380dp"
+                android:layout_marginLeft="210dp"/>
+
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton7"
+                android:layout_marginTop="490dp"
+                android:layout_marginLeft="158dp"
+                android:background="@drawable/peed2" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
 </LinearLayout>
