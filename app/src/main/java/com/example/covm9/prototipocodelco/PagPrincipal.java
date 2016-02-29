@@ -233,10 +233,12 @@ public class PagPrincipal extends AppCompatActivity {
                 httpURLConnection.disconnect();
                 return datos;
             }catch (MalformedURLException e){
+                MyPreferences.isNoFirst(PagPrincipal.this);
                 e.printStackTrace();
                 return "Exception: " + e.getMessage();
             }
                 catch (IOException e){
+                    MyPreferences.isNoFirst(PagPrincipal.this);
                 e.printStackTrace();
                 return "Exception: " + e.getMessage();
             }
@@ -282,13 +284,13 @@ public class PagPrincipal extends AppCompatActivity {
                     Toast.makeText(PagPrincipal.this, R.string.actualizacion, Toast.LENGTH_SHORT).show();
                 }
             }catch (JSONException e){
-                boolean first = MyPreferences.isNoFirst(PagPrincipal.this);
+                MyPreferences.isNoFirst(PagPrincipal.this);
                 Toast.makeText(PagPrincipal.this,R.string.errorActualizacion,Toast.LENGTH_LONG).show();
                 e.printStackTrace();
                 err = "Exception: " + e.getMessage();
             }
             catch (Exception e){
-                boolean first = MyPreferences.isNoFirst(PagPrincipal.this);
+                MyPreferences.isNoFirst(PagPrincipal.this);
                 Toast.makeText(PagPrincipal.this,R.string.errorActualizacion,Toast.LENGTH_LONG).show();
             }
         }//Cierre del metodo  onPostExecute.
@@ -319,10 +321,12 @@ public class PagPrincipal extends AppCompatActivity {
                 httpURLConnection.disconnect();
                 return datos;
             }catch (MalformedURLException e){
+                MyPreferences.isNoFirst(PagPrincipal.this);
                 e.printStackTrace();
                 return "Exception: " + e.getMessage();
             }
             catch (IOException e){
+                MyPreferences.isNoFirst(PagPrincipal.this);
                 e.printStackTrace();
                 return "Exception: " + e.getMessage();
             }
@@ -367,13 +371,13 @@ public class PagPrincipal extends AppCompatActivity {
                     Toast.makeText(PagPrincipal.this, R.string.actualizacion, Toast.LENGTH_SHORT).show();
                 }
             }catch (JSONException e){
-                boolean first = MyPreferences.isNoFirst(PagPrincipal.this);
+                MyPreferences.isNoFirst(PagPrincipal.this);
                 Toast.makeText(PagPrincipal.this,R.string.errorActualizacion,Toast.LENGTH_LONG).show();
                 e.printStackTrace();
                 err = "Exception: " + e.getMessage();
             }
             catch (Exception e){
-                boolean first = MyPreferences.isNoFirst(PagPrincipal.this);
+                MyPreferences.isNoFirst(PagPrincipal.this);
                 Toast.makeText(PagPrincipal.this,R.string.errorActualizacion,Toast.LENGTH_LONG).show();
             }
         }//Cierre del metodo  onPostExecute.
@@ -404,10 +408,12 @@ public class PagPrincipal extends AppCompatActivity {
                 httpURLConnection.disconnect();
                 return datos;
             }catch (MalformedURLException e){
+                MyPreferences.isNoFirst(PagPrincipal.this);
                 e.printStackTrace();
                 return "Exception: " + e.getMessage();
             }
             catch (IOException e){
+                MyPreferences.isNoFirst(PagPrincipal.this);
                 e.printStackTrace();
                 return "Exception: " + e.getMessage();
             }
@@ -449,13 +455,13 @@ public class PagPrincipal extends AppCompatActivity {
                     Toast.makeText(PagPrincipal.this, R.string.actualizacion, Toast.LENGTH_SHORT).show();
                 }
             }catch (JSONException e){
-                boolean first = MyPreferences.isNoFirst(PagPrincipal.this);
+                MyPreferences.isNoFirst(PagPrincipal.this);
                 Toast.makeText(PagPrincipal.this,R.string.errorActualizacion,Toast.LENGTH_LONG).show();
                 e.printStackTrace();
                 err = "Exception: " + e.getMessage();
             }
             catch (Exception e){
-                boolean first = MyPreferences.isNoFirst(PagPrincipal.this);
+                MyPreferences.isNoFirst(PagPrincipal.this);
                 Toast.makeText(PagPrincipal.this,R.string.errorActualizacion,Toast.LENGTH_LONG).show();
             }
         }//Cierre del metodo  onPostExecute.
