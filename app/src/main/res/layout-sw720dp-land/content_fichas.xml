@@ -1,47 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/fondodepantalla2">
-    <Button
-        android:layout_width="170dp"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text="Ficha Tecnica"
-        android:id="@+id/FT"
-        android:layout_marginTop="55dp"
-        android:layout_marginLeft="100dp"
-        android:background="#f0ffa61a"
-        android:textColor="#fbf9f9"
-        android:textSize="@dimen/text_size_standard"
-        />
 
-    <Button
-        android:layout_width="170dp"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text="Ficha de Seguridad"
-        android:id="@+id/FS"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="165dp"
-        android:background="#f0b45400"
-        android:textColor="#fbf9f9"
-        android:textSize="@dimen/text_size_standard"
-        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:layout_width="170dp"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text="Ficha de Ruta"
-        android:id="@+id/FR"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginBottom="80dp"
-        android:background="#f0ffa61a"
-        android:textColor="#fbf9f9"
-        android:textSize="@dimen/text_size_standard"
-        />
+        <RelativeLayout
+            android:layout_width="1200dp"
+            android:layout_height="640dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:layout_gravity="center">
 
+            <Button
+                android:layout_width="350dp"
+                android:layout_height="130dp"
+                android:text="@string/FT"
+                android:id="@+id/FT"
+                android:layout_marginLeft="30dp"
+                android:background="#f0ffa61a"
+                android:textColor="#fbf9f9"
+                android:textSize="@dimen/text_size_standard"
+                />
 
+            <Button
+                android:layout_width="350dp"
+                android:layout_height="130dp"
+                android:text="@string/FS"
+                android:id="@+id/FS"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="175dp"
+                android:background="#f0b45400"
+                android:textColor="#fbf9f9"
+                android:textSize="@dimen/text_size_standard"
+                />
+
+            <Button
+                android:layout_width="350dp"
+                android:layout_height="130dp"
+                android:text="@string/FR"
+                android:id="@+id/FR"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="350dp"
+                android:background="#f0ffa61a"
+                android:textColor="#fbf9f9"
+                android:textSize="@dimen/text_size_standard"
+                />
+        </RelativeLayout>
+    </FrameLayout>
 </LinearLayout>

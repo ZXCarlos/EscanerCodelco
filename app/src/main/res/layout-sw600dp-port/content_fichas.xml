@@ -2,10 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/fondodepantalla"
-    android:focusable="true"
-    android:focusableInTouchMode="true"
-    android:descendantFocusability="afterDescendants">
+    android:background="@drawable/fondodepantalla">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -15,17 +12,17 @@
             android:layout_width="570dp"
             android:layout_height="700dp"
             android:layout_gravity="center"
-            android:layout_marginTop="100dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="26dp">
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp">
 
             <Button
                 android:layout_width="250dp"
                 android:layout_height="100dp"
                 android:text="@string/FT"
                 android:id="@+id/FT"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="190dp"
                 android:layout_marginLeft="10dp"
                 android:background="#f0ffa61a"
                 android:textColor="#fbf9f9"
@@ -37,7 +34,7 @@
                 android:layout_height="100dp"
                 android:text="@string/FS"
                 android:id="@+id/FS"
-                android:layout_marginTop="255dp"
+                android:layout_marginTop="340dp"
                 android:layout_marginLeft="60dp"
                 android:background="#f0b45400"
                 android:textColor="#fbf9f9"
@@ -49,7 +46,7 @@
                 android:layout_height="100dp"
                 android:text="@string/FR"
                 android:id="@+id/FR"
-                android:layout_marginTop="400dp"
+                android:layout_marginTop="490dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="110dp"
                 android:background="#f0ffa61a"

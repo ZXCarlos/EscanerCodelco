@@ -2,10 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/fondodepantalla"
-    android:focusable="true"
-    android:focusableInTouchMode="true"
-    android:descendantFocusability="afterDescendants">
+    android:background="@drawable/fondodepantalla">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -15,17 +12,17 @@
             android:layout_width="580dp"
             android:layout_height="690dp"
             android:layout_gravity="center"
-            android:layout_marginTop="100dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="26dp">
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp">
 
             <Button
                 android:layout_width="250dp"
                 android:layout_height="100dp"               android:text="@string/botn4"
                 android:id="@+id/button4"
-                android:layout_marginTop="60dp"
-                android:layout_marginLeft="25dp"
+                android:layout_marginTop="130dp"
+                android:layout_marginLeft="10dp"
                 android:background="#f0ffa61a"
                 android:textColor="#fbf9f9"
                 android:textSize="@dimen/text_size_standard"
@@ -36,8 +33,8 @@
                 android:layout_height="100dp"
                 android:text="@string/botn"
                 android:id="@+id/button"
-                android:layout_marginTop="200dp"
-                android:layout_marginLeft="50dp"
+                android:layout_marginTop="260dp"
+                android:layout_marginLeft="35dp"
                 android:background="#f0b45400"
                 android:textColor="#fbf9f9"
                 android:textSize="@dimen/text_size_standard"
@@ -48,8 +45,8 @@
                 android:layout_height="100dp"
                 android:text="@string/botn2"
                 android:id="@+id/button2"
-                android:layout_marginTop="330dp"
-                android:layout_marginLeft="25dp"
+                android:layout_marginTop="390dp"
+                android:layout_marginLeft="10dp"
                 android:background="#f0ffa61a"
                 android:textColor="#fbf9f9"
                 android:textSize="@dimen/text_size_standard"
@@ -58,11 +55,10 @@
             <Button
                 android:layout_width="250dp"
                 android:layout_height="100dp"
-                android:layout_marginBottom="90dp"
                 android:text="@string/botn3"
                 android:id="@+id/button3"
-                android:layout_marginTop="470dp"
-                android:layout_marginLeft="50dp"
+                android:layout_marginTop="520dp"
+                android:layout_marginLeft="35dp"
                 android:background="#f0b45400"
                 android:textColor="#fbf9f9"
                 android:textSize="@dimen/text_size_standard"

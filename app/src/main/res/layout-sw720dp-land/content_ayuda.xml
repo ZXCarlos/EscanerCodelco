@@ -1,73 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/marcoorizontal2">
 
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="600dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="70dp">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <ImageButton
-            android:layout_width="200dp"
-            android:layout_height="130dp"
-            android:id="@+id/imageButton"
-            android:layout_marginLeft="65dp"
-            android:background="@drawable/emergenciap"
-            android:layout_marginTop="190dp"/>
+        <RelativeLayout
+            android:layout_width="1000dp"
+            android:layout_height="700dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:layout_gravity="center">
 
-
-        <ImageButton
-            android:layout_width="170dp"
-            android:layout_height="190dp"
-            android:id="@+id/imageButton2"
-            android:background="@drawable/nump"
-            android:layout_marginLeft="300dp"
-            android:layout_marginTop="182dp" />
-
-        <ImageButton
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:id="@+id/imageButton3"
-            android:background="@drawable/alarmap"
-            android:layout_marginTop="165dp"
-            android:layout_marginLeft="490dp"/>
-
-        <ImageButton
-            android:layout_width="170dp"
-            android:layout_height="170dp"
-            android:id="@+id/imageButton4"
-            android:background="@drawable/medicop"
-            android:layout_marginLeft="714dp"
-            android:layout_marginTop="15dp"/>
-
-        <ImageButton
-            android:layout_width="200dp"
-            android:layout_height="170dp"
-            android:id="@+id/imageButton5"
-            android:background="@drawable/brigadap"
-            android:layout_marginLeft="710dp"
-            android:layout_marginTop="200dp"/>
+            <ImageButton
+                android:layout_width="190dp"
+                android:layout_height="130dp"
+                android:id="@+id/imageButton"
+                android:layout_marginRight="700dp"
+                android:background="@drawable/emergenciap"
+                android:layout_marginTop="195dp"/>
 
 
-        <ImageButton
-            android:layout_width="170dp"
-            android:layout_height="170dp"
-            android:id="@+id/imageButton6"
-            android:background="@drawable/protindusp"
-            android:layout_marginLeft="726dp"
-            android:layout_marginTop="365dp" />
+            <ImageButton
+                android:layout_width="170dp"
+                android:layout_height="190dp"
+                android:id="@+id/imageButton2"
+                android:background="@drawable/nump"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="180dp" />
+
+            <ImageButton
+                android:layout_width="190dp"
+                android:layout_height="190dp"
+                android:id="@+id/imageButton3"
+                android:background="@drawable/alarmap"
+                android:layout_marginTop="155dp"
+                android:layout_marginLeft="370dp"/>
+
+            <ImageButton
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:id="@+id/imageButton4"
+                android:layout_marginBottom="340dp"
+                android:background="@drawable/medicop"
+                android:layout_marginLeft="570dp"/>
+
+            <ImageButton
+                android:layout_width="190dp"
+                android:layout_height="170dp"
+                android:id="@+id/imageButton5"
+                android:background="@drawable/brigadap"
+                android:layout_marginLeft="560dp"
+                android:layout_marginTop="180dp"/>
 
 
-        <ImageButton
-            android:layout_width="170dp"
-            android:layout_height="200dp"
-            android:id="@+id/imageButton7"
-            android:background="@drawable/peep"
-            android:layout_marginLeft="930dp"
-            android:layout_marginTop="180dp"/>
+            <ImageButton
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:id="@+id/imageButton6"
+                android:background="@drawable/protindusp"
+                android:layout_marginLeft="570dp"
+                android:layout_marginTop="370dp" />
 
-    </RelativeLayout>
+
+            <ImageButton
+                android:layout_width="160dp"
+                android:layout_height="200dp"
+                android:id="@+id/imageButton7"
+                android:background="@drawable/peep"
+                android:layout_marginLeft="760dp"
+                android:layout_marginTop="160dp"/>
+
+
+
+
+        </RelativeLayout>
+    </FrameLayout>
+
+
 </LinearLayout>

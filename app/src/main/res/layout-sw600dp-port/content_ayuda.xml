@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="1"
     android:background="@drawable/marcovertical2">
@@ -20,13 +20,13 @@
             android:layout_height="match_parent">
 
             <RelativeLayout
-                android:layout_width="534dp"
-                android:layout_height="780dp"
+                android:layout_width="554dp"
+                android:layout_height="800dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="25dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="26dp">
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp">
 
                 <ImageButton
                     android:layout_width="130dp"
