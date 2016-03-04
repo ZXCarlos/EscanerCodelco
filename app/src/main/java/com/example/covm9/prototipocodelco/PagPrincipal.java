@@ -52,9 +52,10 @@ import java.util.Date;
 public class PagPrincipal extends AppCompatActivity {
 
     //Campos de la clase
-    public static final String DIRECCION_CONEXION_Archivo = "http://qrcodech.16mb.com/codigosqr/GetDataArchivo.php";
-    public static final String DIRECCION_CONEXION_SAP = "http://qrcodech.16mb.com/codigosqr/GetDataSap.php";
-    public static final String DIRECCION_CONEXION_Maquina = "http://qrcodech.16mb.com/codigosqr/GetData.php";
+    public static final String DIRECCION_CONEXION_Archivo = "http://mstmescaner.16mb.com/Doc%20MSTMEscaner/GetDataArchivo.php";
+    public static final String DIRECCION_CONEXION_SAP = "http://mstmescaner.16mb.com/Doc%20MSTMEscaner/GetDataSap.php";
+    public static final String DIRECCION_CONEXION_Maquina = "http://mstmescaner.16mb.com/Doc%20MSTMEscaner/GetData.php";
+
     public static final int TIMEOUT = 1000*15;
     ProgressDialog progressDialog;
     boolean PRIMERA;
